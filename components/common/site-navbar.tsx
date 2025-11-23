@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/common/theme-toggle";
 import { cn } from "@/lib/utils";
@@ -14,8 +15,19 @@ export function SiteNavbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="site-container flex flex-wrap items-center justify-between gap-4 py-4">
-        <Link href="/" className="font-grotesk text-xl font-semibold">
-          Prisca Onwudebelu
+        <Link
+          href="/"
+          className="flex items-center transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/50"
+        >
+          <Image
+            src="/prisca-wordmark.svg"
+            alt="Prisca O logo"
+            width={320}
+            height={96}
+            priority
+            className="h-16 w-auto invert-0 dark:invert-0"
+          />
+          <span className="sr-only">Prisca O home</span>
         </Link>
 
         <nav className="order-3 flex w-full justify-center gap-6 text-sm font-medium text-muted-foreground md:order-0 md:flex-1 md:justify-center">

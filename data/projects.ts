@@ -1,109 +1,110 @@
 export type ProjectImage = {
-  src: string
-  alt: string
-  caption: string
-}
+  src: string;
+  alt: string;
+  caption: string;
+};
 
 export type PortfolioProject = {
-  slug: string
-  title: string
-  category: string
-  summary: string
-  description: string
-  role: string
-  responsibilities: string[]
-  techStack: string[]
-  liveUrl: string
-  images: ProjectImage[]
-}
+  slug: string;
+  title: string;
+  category: string;
+  summary: string;
+  description: string;
+  role: string;
+  responsibilities: string[];
+  techStack: string[];
+  liveUrl: string;
+  cloudinaryFolder?: string;
+  images?: ProjectImage[];
+};
 
 export const portfolioProjects: PortfolioProject[] = [
   {
-    slug: "intelligent-commerce-suite",
-    title: "Intelligent Commerce Suite",
-    category: "E-commerce Experience",
+    slug: "checkref",
+    title: "Checkref",
+    category: "B2B SaaS",
     summary:
-      "Full-stack commerce experience with personalized storefronts and Stripe-powered checkout.",
+      "Smart reference-checking platform that streamlines candidate verification for recruiters and HR teams.",
     description:
-      "Delivered an adaptive storefront where merchandising, content, and checkout respond to shopper intent in real time. Built reusable interface primitives, integrated product storytelling, and ensured performance targets across desktop and mobile.",
-    role: "Lead Frontend Engineer & Product Partner",
+      "Checkref is a modern B2B platform that simplifies and automates the reference-checking process for fast-paced hiring teams. I built and refined intuitive interfaces that guide recruiters through candidate reviews, feedback collection, and reporting with clarity and speed. The platform prioritises usability, data accuracy, and seamless workflows to reduce hiring friction and improve decision-making efficiency.",
+    role: "Lead Frontend Engineer",
     responsibilities: [
-      "Architected a modular design system shared across marketing and product",
-      "Implemented advanced filtering, wishlists, and localized pricing flows",
-      "Led accessibility and performance audits to keep LCP under 1.7s",
+      "Built and maintained scalable UI components for recruiter dashboards and candidate review flows.",
+      "Translated complex HR workflows into clean, user-friendly interfaces with a strong focus on accessibility.",
+      "Improved performance and load times by optimising component rendering and asset delivery.",
+      "Collaborated with designers and backend engineers to deliver seamless, end-to-end user experiences.",
+      "Ensured responsive consistency across devices and browsers.",
     ],
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe", "Framer Motion"],
-    liveUrl: "#",
-    images: [
-      {
-        src: "/projects/commerce-1.svg",
-        alt: "Commerce landing hero",
-        caption: "Personalized storefront hero showcasing curated products.",
-      },
-      {
-        src: "/projects/commerce-2.svg",
-        alt: "Commerce dashboard",
-        caption: "Analytics dashboard used by merchandisers to tune campaigns.",
-      },
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "React Query",
+      "React Hook Form",
     ],
+    liveUrl: "https://checkref.co",
+    cloudinaryFolder: "Prisca - Portfolio Project Images/Checkref",
+    images: [],
   },
   {
-    slug: "insightops-dashboard",
-    title: "InsightOps Dashboard",
-    category: "Data Visualization",
+    slug: "foodease",
+    title: "FoodEase",
+    category: "B2B SaaS",
     summary:
-      "Real-time operations dashboard with role-based views and configurable widgets.",
+      "All-in-one restaurant management system for seamless operations and customer flow.",
     description:
-      "Partnered with the ops team to translate dense data streams into friendly UI. Designed card-based layouts, contextual drill-downs, and alert surfaces that helped teams act faster.",
-    role: "Senior Frontend Engineer",
+      "FoodEase is a comprehensive SaaS platform designed to help restaurants manage orders, menus, staff, and customer interactions from a single dashboard. I contributed to crafting interactive interfaces that simplified daily operations for restaurant owners and staff, ensuring a smooth experience from order placement to kitchen processing and analytics tracking.",
+    role: "Frontend Engineer",
     responsibilities: [
-      "Shipped live data visualizations with streaming updates",
-      "Crafted dark/light theming for mission control workspaces",
-      "Collaborated with backend to optimize websocket payloads",
+      "Developed interactive dashboards for real-time order management and business insights.",
+      "Implemented responsive UI for menu management, staff control, and customer order flows.",
+      "Integrated form handling and validation to ensure accurate data input across admin features.",
+      "Optimised user interaction patterns to reduce task completion time for restaurant staff.",
+      "Maintained design consistency and enhanced visual hierarchy for better usability.",
+      "Collaborated with designers and backend engineers to deliver seamless, end-to-end user experiences.",
+      "Ensured responsive consistency across devices and browsers.",
     ],
-    techStack: ["Next.js", "Zustand", "Tailwind CSS", "TypeScript", "Chart.js"],
-    liveUrl: "#",
-    images: [
-      {
-        src: "/projects/insight-1.svg",
-        alt: "InsightOps overview",
-        caption: "Executive overview summarizing KPIs across regions.",
-      },
-      {
-        src: "/projects/insight-2.svg",
-        alt: "InsightOps detail",
-        caption: "Detailed incident timeline with collaborative notes.",
-      },
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Redux Toolkit",
+      "React Hook Form",
+      "React Hot Toast",
     ],
+    liveUrl: "https://food-ease.io",
+    cloudinaryFolder: "Prisca - Portfolio Project Images/Foodease",
+    images: [],
   },
   {
-    slug: "momentum-fitness",
-    title: "Momentum Fitness",
-    category: "Mobile Experience",
-    summary:
-      "Motivation-first fitness app blending habit tracking with community challenges.",
+    slug: "iseememories",
+    title: "I See Memories",
+    category: "B2C E-commerce",
+    summary: "Personalised photo book and memory preservation platform.",
     description:
-      "Crafted a wellness companion focused on streaks, social accountability, and celebrating progress. Built gesture-friendly UI and micro-interactions that keep users engaged.",
-    role: "Product Designer & Frontend Dev",
+      "I See Memories is an e-commerce platform that allows users to curate, customise, and order personalised photo books for cherished moments. I helped bring emotion-driven design to life by building visually engaging interfaces that made the creation process intuitive, delightful, and seamless, from photo selection to checkout.",
+    role: "Full-stack Engineer",
     responsibilities: [
-      "Defined motion language and prototyped micro-interactions",
-      "Implemented progressive onboarding with save-state recovery",
-      "Integrated community features including squads and shoutouts",
+      "Created user-friendly interfaces for photo uploads, customisation, and preview flows.",
+      "Built responsive product pages to enhance storytelling and emotional connection.",
+      "Enhanced checkout and order flow UX for smoother conversions.",
+      "Implemented animations and micro-interactions to elevate user engagement.",
+      "Ensured performance optimisation for media-heavy pages without compromising quality.",
     ],
-    techStack: ["React Native", "Expo", "TypeScript", "Tailwind CSS", "Supabase"],
-    liveUrl: "#",
-    images: [
-      {
-        src: "/projects/momentum-1.svg",
-        alt: "Momentum fitness feed",
-        caption: "Community feed with progress updates and encouragements.",
-      },
-      {
-        src: "/projects/momentum-2.svg",
-        alt: "Momentum goals view",
-        caption: "Goal tracker displaying streaks and upcoming sessions.",
-      },
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "React Query",
+      "React Hot Toast",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Mongoose",
+      "Paystack",
     ],
+    liveUrl: "https://www.iseememoriesng.com",
+    cloudinaryFolder: "Prisca - Portfolio Project Images/Iseememories",
+    images: [],
   },
-]
-
+];
