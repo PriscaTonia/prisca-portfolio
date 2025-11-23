@@ -22,14 +22,21 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { useRouter } from "next/navigation";
 
 const socials = [
-  { icon: Linkedin, label: "LinkedIn", href: "#" },
-  { icon: Github, label: "GitHub", href: "#" },
-  { icon: Mail, label: "Email", href: "#" },
+  {
+    icon: Linkedin,
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/prisca-ebube",
+  },
+  { icon: Github, label: "GitHub", href: "https://github.com/PriscaTonia" },
+  { icon: Mail, label: "Email", href: "mailto:priscaebube@gmail.com" },
 ];
 
 export function HeroSection() {
+  const { push } = useRouter();
+
   return (
     <section
       id="about"
@@ -43,7 +50,7 @@ export function HeroSection() {
       >
         <div className="inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/10 px-4 py-2 text-sm text-accent-foreground">
           <span className="size-2 rounded-full bg-accent" />
-          Available for new opportunities
+          Let&apos;s build something beautiful
         </div>
 
         <div className="space-y-4">
@@ -61,10 +68,10 @@ export function HeroSection() {
         </div>
 
         <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
-          <div className="flex items-center gap-2 font-medium text-foreground">
+          {/* <div className="flex items-center gap-2 font-medium text-foreground">
             <MapPin className="size-4 text-accent" />
             San Francisco, CA
-          </div>
+          </div> */}
           <div className="flex items-center gap-2 font-medium text-foreground">
             <Briefcase className="size-4 text-accent" />
             5+ years experience
@@ -76,13 +83,23 @@ export function HeroSection() {
         </div>
 
         <div className="flex flex-wrap gap-4">
-          <Button size="lg" className="gap-2">
+          <Button
+            size="lg"
+            onClick={() => push("/#projects")}
+            className="gap-2"
+          >
             <ExternalLink className="size-4" />
             View My Work
           </Button>
-          <Button size="lg" variant="outline" className="gap-2">
-            <Download className="size-4" />
-            Download CV
+          <Button size="lg" variant="outline" className="gap-2" asChild>
+            <a
+              href="/Prisca-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Download className="size-4" />
+              Download CV
+            </a>
           </Button>
         </div>
 
@@ -97,7 +114,12 @@ export function HeroSection() {
                 asChild
                 className="border border-border/60 text-muted-foreground hover:text-foreground"
               >
-                <a href={social.href} aria-label={social.label}>
+                <a
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                >
                   <Icon className="size-5" />
                 </a>
               </Button>
@@ -119,18 +141,18 @@ export function HeroSection() {
               Prisca Onwudebelu
             </CardTitle>
             <CardDescription className="text-base">
-              Frontend Engineer & Product Partner
+              Software Engineer (Frontend)
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
-            <div className="flex items-center justify-center gap-1 text-accent">
+            {/* <div className="flex items-center justify-center gap-1 text-accent">
               {[...Array(5)].map((_, idx) => (
                 <Star key={idx} className="size-4 fill-accent text-accent" />
               ))}
             </div>
             <p className="text-center text-sm text-muted-foreground">
               5.0 rating from 50+ collaborators
-            </p>
+            </p> */}
             <div className="grid gap-4 rounded-2xl bg-background/60 p-4">
               <div className="flex items-center justify-between text-sm">
                 <span className="text-muted-foreground">Specialty</span>
@@ -151,7 +173,9 @@ export function HeroSection() {
               Helping teams launch intentional, human-centered experiences.
             </p>
             <CardAction className="w-full">
-              <Button className="w-full">Get in Touch</Button>
+              <Button onClick={() => push("/#contact")} className="w-full">
+                Get in Touch
+              </Button>
             </CardAction>
           </CardFooter>
         </Card>

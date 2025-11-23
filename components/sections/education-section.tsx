@@ -3,16 +3,20 @@
 import { motion } from "framer-motion";
 
 const education = {
-  school: "BS, Electrical & Computer Engineering",
-  institution: "University of Lagos",
-  year: "2018",
+  school: "BEng, Electronic & Computer Engineering",
+  institution: "Nnamdi Azikiwe University, Awka, Anambra state.",
+  year: "2016 - 2021",
   details: [
-    "Algorithms & Data Structures",
-    "Object Oriented Programming",
-    "Human-Computer Interaction",
-    "Probability & Statistics",
-    "Systems Design",
+    "Electronics",
+    "Digital Logic Design",
+    "Computer Architecture",
+    "Operating Systems",
+    "Computer Networks",
+    "Database Systems",
+    "Software Engineering",
     "Artificial Intelligence",
+    "Computer Vision",
+    "Embedded Systems",
   ],
 };
 
@@ -62,4 +66,3 @@ export function EducationSection() {
     </section>
   );
 }
-

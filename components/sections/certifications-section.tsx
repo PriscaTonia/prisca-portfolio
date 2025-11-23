@@ -1,27 +1,26 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Button } from "../ui/button";
+import Link from "next/link";
+import { ExternalLink } from "lucide-react";
 
 const certifications = [
   {
-    title: "Product Design for Engineers",
-    issuer: "SuperHi",
-    summary: "Experience design, prototyping, and storytelling for engineers.",
+    id: 1,
+    title: "Frontend Development (Internship)",
+    issuer: "Genesys",
+    link: "https://drive.google.com/file/d/1mC2EqODKYar-2_c0aKxWUV9Vh1DtyI0W/view?usp=sharing",
+    summary:
+      "Built a strong foundation in frontend development, learning the core essentials of HTML, CSS, JavaScript, and React. This program introduced me to modern web workflows and best practices, shaping my problem-solving mindset and setting the stage for scalable UI development.",
   },
   {
-    title: "Advanced React Patterns",
-    issuer: "EpicReact",
-    summary: "Performance, accessibility, and state patterns for modern apps.",
-  },
-  {
-    title: "Human-Centered Design",
-    issuer: "IDEO U",
-    summary: "Research synthesis, journey mapping, and facilitation methods.",
-  },
-  {
-    title: "Web Accessibility Specialist",
-    issuer: "Deque University",
-    summary: "Auditing interfaces and building inclusive component systems.",
+    id: 2,
+    title: "Frontend Development (Internship)",
+    issuer: "HNG - Hotels.ng",
+    link: "https://drive.google.com/file/d/1Ok2gicaT-1OZpjtYSZSvotnEXwfMUXns/view?usp=sharing",
+    summary:
+      "Applied frontend skills to real-world projects, strengthening my ability to build responsive, production-ready interfaces. Expanded my toolkit with Tailwind CSS, Styled Components, and advanced React patterns while collaborating in fast-paced team environments to deliver functional, user-focused applications.",
   },
 ];
 
@@ -40,7 +39,7 @@ export function CertificationsSection() {
       <div className="grid gap-4 md:grid-cols-2">
         {certifications.map((cert, index) => (
           <motion.div
-            key={cert.title}
+            key={cert.id}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
@@ -54,10 +53,20 @@ export function CertificationsSection() {
               {cert.title}
             </h3>
             <p className="mt-2 text-sm text-muted-foreground">{cert.summary}</p>
+            <Button
+              size="sm"
+              variant="outline"
+              className="gap-2 mt-3 text-muted-foreground hover:text-foreground"
+              asChild
+            >
+              <Link href={cert.link} target="_blank">
+                View
+                <ExternalLink className="size-3.5" />
+              </Link>
+            </Button>
           </motion.div>
         ))}
       </div>
     </section>
   );
 }
-

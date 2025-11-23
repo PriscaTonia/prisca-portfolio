@@ -1,0 +1,22 @@
+<svg width="240" height="72" viewBox="0 0 240 72" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">Prisca handwritten logo</title>
+  <desc id="logoDesc">Cursive wordmark spelling Prisca.</desc>
+  <text
+    x="26"
+    y="44"
+    fill="#CE6E77"
+    font-size="38"
+    font-weight="600"
+    font-family="'Great Vibes', 'Dancing Script', 'Segoe Script', cursive"
+  >
+    Prisca
+  </text>
+  <path
+    d="M26 48c24 7 58 7 90 0"
+    fill="none"
+    stroke="#CE6E77"
+    stroke-width="3"
+    stroke-linecap="round"
+  />
+</svg>
+
