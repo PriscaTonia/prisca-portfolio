@@ -9,8 +9,8 @@ import {
   Github,
   Linkedin,
   Mail,
-  MapPin,
-  Star,
+  // MapPin,
+  // Star,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -23,6 +23,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const socials = [
   {
@@ -135,8 +136,16 @@ export function HeroSection() {
       >
         <Card className="relative overflow-hidden border-none bg-card/90 shadow-xl ring-1 ring-border/40">
           <div className="absolute inset-0 -z-10 rotate-6 rounded-4xl bg-accent/40 blur-3xl" />
+
           <CardHeader className="items-center text-center">
-            <div className="size-28 rounded-full border border-border/60 bg-linear-to-br from-primary/20 to-accent/30 shadow-inner" />
+            <Image
+              src="/prisca.JPG"
+              alt="Profile picture"
+              width={100}
+              height={80}
+              className="object-contain rounded-full border border-border/60 bg-linear-to-br from-primary/20 to-accent/30"
+            />
+            {/* <div className="size-28 rounded-full border border-border/60 bg-linear-to-br from-primary/20 to-accent/30 shadow-inner" /> */}
             <CardTitle className="text-2xl font-semibold">
               Prisca Onwudebelu
             </CardTitle>

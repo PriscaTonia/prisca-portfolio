@@ -8,20 +8,20 @@ const channels = [
   {
     icon: Mail,
     label: "Email",
-    value: "hello@prisca.dev",
-    href: "mailto:hello@prisca.dev",
+    value: "Priscaebube@gmail.com",
+    href: "mailto:priscaebube@gmail.com",
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
-    value: "@priscacodes",
-    href: "https://www.linkedin.com",
+    value: "Prisca Onwudebelu",
+    href: "https://www.linkedin.com/in/prisca-ebube",
   },
   {
     icon: Github,
     label: "GitHub",
-    value: "github.com/priscacodes",
-    href: "https://github.com",
+    value: "Github.com/PriscaTonia",
+    href: "https://github.com/PriscaTonia",
   },
 ];
 
@@ -33,14 +33,14 @@ export function ContactSection() {
     >
       <div className="space-y-4 text-center">
         <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground">
-          Let's Connect
+          Let&apos;s Connect
         </p>
         <h2 className="text-3xl font-semibold sm:text-4xl">
           Ready to build something beautiful?
         </h2>
         <p className="text-base text-muted-foreground sm:text-lg">
-          Reach out to chat about collaborations, leadership engagements, or
-          mentoring opportunities.
+          Got a project idea or opportunity in mind? Reach out, let’s
+          collaborate and make it unforgettable.
         </p>
       </div>
 
@@ -61,7 +61,9 @@ export function ContactSection() {
               <CardContent>
                 <a
                   href={channel.href}
-                  className="font-semibold text-foreground transition hover:text-primary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-foreground hover:underline transition hover:text-primary"
                 >
                   {channel.value}
                 </a>
@@ -72,16 +74,27 @@ export function ContactSection() {
       </div>
 
       <div className="flex flex-wrap justify-center gap-3">
-        <Button size="lg" className="gap-2">
-          <MessageCircle className="size-4" />
-          Send Message
+        <Button size="lg" className="gap-2" asChild>
+          <a
+            href="mailto:priscaebube@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <MessageCircle className="size-4" />
+            Send Message
+          </a>
         </Button>
-        <Button size="lg" variant="outline" className="gap-2">
-          <Calendar className="size-4" />
-          Schedule Call
+        <Button size="lg" variant="outline" className="gap-2" asChild>
+          <a
+            href="mailto:priscaebube@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Calendar className="size-4" />
+            Schedule Call
+          </a>
         </Button>
       </div>
     </section>
   );
 }
-
