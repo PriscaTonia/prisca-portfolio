@@ -75,7 +75,7 @@ export function HeroSection() {
           </div> */}
           <div className="flex items-center gap-2 font-medium text-foreground">
             <Briefcase className="size-4 text-accent" />
-            5+ years experience
+            Over 3 years experience
           </div>
           <div className="flex items-center gap-2 font-medium text-foreground">
             <Award className="size-4 text-accent" />
