@@ -52,6 +52,7 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: "Prisca Onwudebelu | Frontend Engineer",
+        type: "image/jpeg",
       },
     ],
   },
@@ -61,7 +62,7 @@ export const metadata: Metadata = {
     description:
       "Frontend Engineer specializing in React, Next.js, and TypeScript. Focused on rich product storytelling, high-performing interfaces, and systems that scale gracefully across teams and devices.",
     creator: "@EbubePrisca", // replace with your handle if available
-    images: [`${og_image_url}`],
+    images: [og_image_url],
   },
   icons: {
     icon: "/favicon.ico",
