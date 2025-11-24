@@ -14,7 +14,7 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const website_url = "https://prisca.vercel.app";
+const website_url = "https://www.prisca.dev";
 const og_image_url =
   "https://res.cloudinary.com/prisca/image/upload/v1763980377/Other%20Images/opengraph-image_jqge8m.jpg";
 
