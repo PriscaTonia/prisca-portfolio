@@ -107,4 +107,25 @@ export const portfolioProjects: PortfolioProject[] = [
     cloudinaryFolder: "Prisca - Portfolio Project Images/Iseememories",
     images: [],
   },
+  {
+    slug: "caephas-portfolio",
+    title: "Portfolio - Arinze Obidiegwu",
+    category: "Personal Branding / Portfolio",
+    summary:
+      "A modern, responsive portfolio website built to showcase Arinze Obidiegwu’s professional identity, skills, and creative work in a clean and compelling way.",
+    description:
+      "This project involved designing and developing a sleek personal portfolio for Arinze Obidiegwu, focused on presenting his work, experience, and personal brand with clarity and impact. The website combines visual storytelling with intuitive navigation, ensuring visitors can easily explore his projects, background, and contact information while maintaining a strong professional presence online.",
+    role: "Frontend Engineer",
+    responsibilities: [
+      "Designed and developed a visually appealing and structured portfolio layout.",
+      "Implemented responsive design to ensure seamless experience across devices.",
+      "Optimised content presentation for clarity, readability, and brand alignment.",
+      "Built interactive sections for showcasing projects and personal information.",
+      "Ensured smooth navigation and fast load performance.",
+    ],
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
+    liveUrl: "https://www.arinzeobidiegwu.com",
+    cloudinaryFolder: "Prisca - Portfolio Project Images/Caephas",
+    images: [],
+  },
 ];

@@ -59,7 +59,7 @@ export function CertificationsSection() {
               className="gap-2 mt-3 text-muted-foreground hover:text-foreground"
               asChild
             >
-              <Link href={cert.link} target="_blank">
+              <Link href={cert.link} target="_blank" rel="noopener noreferrer">
                 View
                 <ExternalLink className="size-3.5" />
               </Link>
