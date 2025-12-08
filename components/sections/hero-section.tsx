@@ -75,11 +75,11 @@ export function HeroSection() {
           </div> */}
           <div className="flex items-center gap-2 font-medium text-foreground">
             <Briefcase className="size-4 text-accent" />
-            Over 3 years experience
+            Building delightful web experiences.
           </div>
           <div className="flex items-center gap-2 font-medium text-foreground">
             <Award className="size-4 text-accent" />
-            Product-focused builder
+            Product-focused engineer.
           </div>
         </div>
 

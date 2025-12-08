@@ -58,7 +58,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </div>
         <div className="flex flex-wrap gap-4">
           <Button size="lg" asChild className="gap-2">
-            <Link href={project.liveUrl || "/"}>
+            <Link
+              href={project.liveUrl || "/"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               View Live
               <ExternalLink className="size-4" />
             </Link>
