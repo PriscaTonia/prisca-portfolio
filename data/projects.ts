@@ -20,6 +20,33 @@ export type PortfolioProject = {
 
 export const portfolioProjects: PortfolioProject[] = [
   {
+    slug: "surfnturf",
+    title: "Surf n' Turf",
+    category: "B2C E-commerce",
+    summary: "Premium restaurant ordering and reservations platform.",
+    description:
+      "Surf n' Turf is an upscale restaurant platform that lets customers browse the menu, place orders, make reservations, and track their meals — all from a seamless online experience. As a frontend engineer, I focused on crafting a premium, intuitive UI that made the entire ordering journey feel effortless and enjoyable.",
+    role: "Frontend Engineer",
+    responsibilities: [
+      "Built interactive menu browsing and filtering for a smooth discovery experience.",
+      "Developed a responsive cart and checkout flow optimised for conversions.",
+      "Implemented real-time order tracking UI to keep customers informed at every step.",
+      "Created an intuitive reservations and booking interface for seamless table management.",
+      "Ensured a polished, responsive design consistent with the brand's upscale identity.",
+      "Implemented animations and micro-interactions to elevate the overall user experience.",
+    ],
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "React Query",
+      "React Hot Toast",
+    ],
+    liveUrl: "https://surfnturfng.com",
+    cloudinaryFolder: "Prisca - Portfolio Project Images/Surfnturf",
+    images: [],
+  },
+  {
     slug: "checkref",
     title: "Checkref",
     category: "B2B SaaS",
