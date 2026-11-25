@@ -18,7 +18,7 @@ export function Label({
 /**
  * Tag (brief §4.4)
  * - soft:   "Featured", "Current", "Primary"
- * - dashed: "Draft", "Details to come", "Part-time", "Practical · growing"
+ * - dashed: "Draft", "Details to come", "Part-time"
  */
 export function Tag({
   variant = "soft",

@@ -60,27 +60,24 @@ export function Gallery({ images, title }: { images: ProjectImage[]; title: stri
     dialogRef.current?.showModal();
     document.documentElement.style.overflow = "hidden";
   };
-  const close = () => dialogRef.current?.close();
+  // Restore page scroll and focus. Idempotent: it runs from the Close button,
+  // the `cancel` event (Escape) and the `close` event, because Chrome doesn't
+  // always dispatch `close` after an Escape-triggered cancel.
+  const restore = () => {
+    if (document.documentElement.style.overflow !== "hidden") return;
+    document.documentElement.style.overflow = "";
+    openerRef.current?.focus();
+  };
+  const close = () => {
+    dialogRef.current?.close();
+    restore();
+  };
   const go = React.useCallback((d: number) => setIndex((i) => (i + d + all.length) % all.length), [all.length]);
 
-  React.useEffect(() => {
-    const dlg = dialogRef.current;
-    if (!dlg) return;
-    const onClose = () => {
-      document.documentElement.style.overflow = "";
-      openerRef.current?.focus();
-    };
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "ArrowRight") go(1);
-      if (e.key === "ArrowLeft") go(-1);
-    };
-    dlg.addEventListener("close", onClose);
-    dlg.addEventListener("keydown", onKey);
-    return () => {
-      dlg.removeEventListener("close", onClose);
-      dlg.removeEventListener("keydown", onKey);
-    };
-  }, [go]);
+  const onDialogKey = (e: React.KeyboardEvent<HTMLDialogElement>) => {
+    if (e.key === "ArrowRight") go(1);
+    if (e.key === "ArrowLeft") go(-1);
+  };
 
   if (!all.length) return null;
   const current = all[index];
@@ -115,6 +112,9 @@ export function Gallery({ images, title }: { images: ProjectImage[]; title: stri
         ref={dialogRef}
         aria-label={`${title} image gallery`}
         className="m-0 h-dvh max-h-none w-screen max-w-none bg-bg p-0 text-ink backdrop:bg-black/60"
+        onClose={restore}
+        onCancel={restore}
+        onKeyDown={onDialogKey}
         onClick={(e) => {
           // click on the bare backdrop area closes
           if (e.target === e.currentTarget) close();

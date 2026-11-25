@@ -3,7 +3,7 @@ import { site } from "@/data/site";
 import { localPosts } from "@/data/writing";
 import { getPublicProjects } from "@/lib/content";
 
-/** Placeholder projects/posts and /dev are excluded. */
+/** Placeholder projects and posts are excluded. */
 export default function sitemap(): MetadataRoute.Sitemap {
   const url = (path: string) => new URL(path, site.url).toString();
   const pages = ["/", "/work", "/about", "/explorations", "/writing", "/contact"].map((p) => ({

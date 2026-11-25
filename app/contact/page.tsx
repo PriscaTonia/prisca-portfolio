@@ -40,7 +40,7 @@ export default function ContactPage() {
             <p className="label">The quickest way</p>
             <a
               href={`mailto:${email}`}
-              className="mt-4 block text-[clamp(24px,3.4vw,44px)] font-medium tracking-[-0.03em] text-ink underline decoration-accent decoration-2 underline-offset-[0.18em] [overflow-wrap:anywhere] hover:text-link"
+              className="mt-4 block py-1.5 text-[clamp(24px,3.4vw,44px)] font-medium tracking-[-0.03em] text-ink underline decoration-accent decoration-2 underline-offset-[0.18em] [overflow-wrap:anywhere] hover:text-link"
             >
               {email}
             </a>

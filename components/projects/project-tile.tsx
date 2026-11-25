@@ -227,7 +227,7 @@ export function ProjectTile({ project, variant, index, priority, headingLevel = 
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative z-[2] text-link underline decoration-[color-mix(in_srgb,currentColor_35%,transparent)] underline-offset-[0.22em] hover:decoration-current"
+              className="relative z-[2] inline-flex min-h-11 items-center text-link underline decoration-[color-mix(in_srgb,currentColor_35%,transparent)] underline-offset-[0.22em] hover:decoration-current"
             >
               Live site<span aria-hidden> ↗</span>
               <span className="sr-only"> for {project.title} (opens in a new tab)</span>

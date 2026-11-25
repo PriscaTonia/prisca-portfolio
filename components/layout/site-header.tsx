@@ -18,7 +18,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 h-[var(--header-h)] border-b border-line bg-bg">
       <div className="container-x flex h-full items-center justify-between gap-6">
-        <Link href="/" aria-label="Prisca Onwudebelu, home" className="rounded-sm py-2">
+        <Link href="/" aria-label="Prisca Onwudebelu, home" className="inline-flex min-h-11 items-center rounded-sm">
           <Wordmark />
         </Link>
 

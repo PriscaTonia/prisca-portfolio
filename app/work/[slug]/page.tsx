@@ -123,11 +123,11 @@ export default async function ProjectPage({ params }: Params) {
           <nav aria-label="Breadcrumb">
             <ol className="flex flex-wrap items-center gap-2 text-[14px] text-muted">
               <li>
-                <Link href="/work" className="hover:text-ink">Work</Link>
+                <Link href="/work" className="inline-flex min-h-11 items-center hover:text-ink">Work</Link>
               </li>
               <li aria-hidden>/</li>
               <li>
-                <Link href={`/work?type=${primaryType}`} className="hover:text-ink">
+                <Link href={`/work?type=${primaryType}`} className="inline-flex min-h-11 items-center hover:text-ink">
                   {typeLabel[primaryType] ?? p.category}
                 </Link>
               </li>
@@ -135,7 +135,7 @@ export default async function ProjectPage({ params }: Params) {
               <li aria-current="page" className="text-ink">{p.title}</li>
             </ol>
           </nav>
-          <Link href="/work" className="group inline-flex items-center gap-1.5 text-[14px] text-ink">
+          <Link href="/work" className="group inline-flex min-h-11 items-center gap-1.5 text-[14px] text-ink">
             <Arrow dir="left" /> All projects
           </Link>
         </div>
@@ -381,7 +381,7 @@ export default async function ProjectPage({ params }: Params) {
             <Container>
               <div className="flex items-baseline justify-between gap-4 border-t border-ink pt-4">
                 <h2 id="related-heading" className="label text-ink">Related projects</h2>
-                <Link href="/work" className="text-[14.5px] text-link underline underline-offset-4">
+                <Link href="/work" className="inline-flex min-h-11 items-center text-[14.5px] text-link underline underline-offset-4">
                   All work
                 </Link>
               </div>

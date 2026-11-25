@@ -168,7 +168,7 @@ export default function AboutPage() {
             Beyond the <span className="serif text-panel-accent">interface.</span>
           </h2>
           <p className="mt-4 text-[16.5px] leading-relaxed text-panel-muted">{exploring.body}</p>
-          <Link href="/explorations" className="group mt-6 inline-flex items-center gap-2 font-medium text-panel-ink hover:text-panel-accent">
+          <Link href="/explorations" className="group mt-6 inline-flex min-h-11 items-center gap-2 font-medium text-panel-ink hover:text-panel-accent">
             See the lab <Arrow />
           </Link>
         </section>
@@ -265,7 +265,7 @@ export default function AboutPage() {
                           <li key={s}>
                             <Link
                               href={`/work/${s}`}
-                              className="inline-flex min-h-9 items-center gap-1.5 rounded-full border border-line-2 px-3.5 text-[14px] text-ink transition-colors duration-300 hover:bg-soft"
+                              className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-line-2 px-3.5 text-[14px] text-ink transition-colors duration-300 hover:bg-soft"
                             >
                               {p.title} <span aria-hidden className="text-muted">→</span>
                             </Link>

@@ -81,13 +81,13 @@ export default async function ArticlePage({ params }: Params) {
         <nav aria-label="Breadcrumb">
           <ol className="flex flex-wrap items-center gap-2 text-[14px] text-muted">
             <li>
-              <Link href="/writing" className="hover:text-ink">Writing</Link>
+              <Link href="/writing" className="inline-flex min-h-11 items-center hover:text-ink">Writing</Link>
             </li>
             <li aria-hidden>/</li>
             <li aria-current="page" className="text-ink">{post.title}</li>
           </ol>
         </nav>
-        <Link href="/writing" className="group inline-flex items-center gap-1.5 text-[14px] text-ink">
+        <Link href="/writing" className="group inline-flex min-h-11 items-center gap-1.5 text-[14px] text-ink">
           <Arrow dir="left" /> All writing
         </Link>
       </div>

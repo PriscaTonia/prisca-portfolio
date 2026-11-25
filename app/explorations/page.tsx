@@ -146,7 +146,7 @@ export default function ExplorationsPage() {
 
         <div className="mt-[clamp(64px,8vw,112px)] flex flex-wrap items-center justify-between gap-4 border-t border-line pt-6">
           <p className="text-[17px] text-muted">Looking for client and product work?</p>
-          <Link href="/work" className="group inline-flex items-center gap-2 text-[16px] font-medium text-ink">
+          <Link href="/work" className="group inline-flex min-h-11 items-center gap-2 text-[16px] font-medium text-ink">
             See the professional work <Arrow />
           </Link>
         </div>

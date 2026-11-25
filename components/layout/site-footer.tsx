@@ -12,7 +12,7 @@ export function SiteFooter() {
     <footer className="mt-auto border-t border-line">
       <div className="container-x grid gap-12 py-16 desk:grid-cols-[1.4fr_1fr_1fr] desk:gap-10">
         <div>
-          <Link href="/" aria-label="Prisca Onwudebelu, home" className="inline-block rounded-sm">
+          <Link href="/" aria-label="Prisca Onwudebelu, home" className="inline-flex min-h-11 items-center rounded-sm">
             <Wordmark />
           </Link>
           <p className="serif mt-4 max-w-[22ch] text-[26px] leading-[1.15] text-ink">
@@ -22,10 +22,10 @@ export function SiteFooter() {
 
         <nav aria-label="Footer">
           <p className="label mb-4">Pages</p>
-          <ul className="grid grid-cols-2 gap-x-6 gap-y-2.5">
+          <ul className="grid grid-cols-2 gap-x-6">
             {mainNav.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} className="text-[15.5px] text-muted transition-colors duration-300 hover:text-ink">
+                <Link href={item.href} className="inline-flex min-h-11 items-center text-[15.5px] text-muted transition-colors duration-300 hover:text-ink">
                   {item.label}
                 </Link>
               </li>

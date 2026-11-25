@@ -148,7 +148,7 @@ export default function HomePage() {
                   ))}
                 </ul>
               </div>
-              <Link href="/work" className="group inline-flex shrink-0 items-center gap-2 text-[15px] font-medium text-ink">
+              <Link href="/work" className="group inline-flex min-h-11 shrink-0 items-center gap-2 text-[15px] font-medium text-ink">
                 View all {all.length} projects <Arrow />
               </Link>
             </div>
@@ -234,14 +234,14 @@ export default function HomePage() {
             </p>
             <a
               href={`mailto:${site.contact.email}`}
-              className="mt-10 inline-block text-[clamp(22px,3.4vw,44px)] font-medium tracking-[-0.03em] text-panel-ink underline decoration-panel-accent decoration-2 underline-offset-[0.18em] [overflow-wrap:anywhere] hover:text-panel-accent"
+              className="mt-10 inline-block py-1.5 text-[clamp(22px,3.4vw,44px)] font-medium tracking-[-0.03em] text-panel-ink underline decoration-panel-accent decoration-2 underline-offset-[0.18em] [overflow-wrap:anywhere] hover:text-panel-accent"
             >
               {site.contact.email}
             </a>
             <div className="mt-8">
               <Link
                 href="/contact"
-                className="group inline-flex items-center gap-2 text-[15px] font-medium text-panel-ink hover:text-panel-accent"
+                className="group inline-flex min-h-11 items-center gap-2 text-[15px] font-medium text-panel-ink hover:text-panel-accent"
               >
                 More ways to reach me <Arrow />
               </Link>
