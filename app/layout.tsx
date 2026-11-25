@@ -16,7 +16,7 @@ const dmSans = DM_Sans({
 const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
   weight: "400",
-  style: ["italic", "normal"],
+  style: "italic",
   variable: "--font-instrument-serif",
   display: "swap",
 });
@@ -26,6 +26,8 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500"],
   variable: "--font-jetbrains-mono",
   display: "swap",
+  // Small labels only: keep it off the critical path (metric-matched fallback prevents shift).
+  preload: false,
 });
 
 const defaultTitle = `${site.name} — ${site.jobTitle}`;

@@ -10,9 +10,8 @@ import { cn } from "@/lib/utils";
  * whole composition scales as one piece. Decorative: hidden from AT.
  */
 
-// Fine film grain, multiplied over the large shapes.
-const GRAIN =
-  "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>\")";
+// Fine film grain: a tiny pre-rendered tile (cheaper to paint than an SVG noise filter).
+const GRAIN = "url(/grain.png)";
 
 function Layer({
   className,
@@ -73,7 +72,7 @@ export function HeroVisual({ className }: { className?: string }) {
             background: "linear-gradient(180deg, var(--soft) 0%, color-mix(in srgb, var(--tone-1) 75%, var(--soft)) 100%)",
           }}
         >
-          <span className="absolute inset-0 opacity-[0.10] mix-blend-multiply" style={{ backgroundImage: GRAIN }} />
+          <span className="absolute inset-0 opacity-[0.35]" style={{ backgroundImage: GRAIN }} />
           {/* inner arch hairline */}
           <span
             className="absolute border border-bg/70"
@@ -98,20 +97,9 @@ export function HeroVisual({ className }: { className?: string }) {
         {/* beige organic blob */}
         <Layer delay={0.12} style={{ left: "-4%", bottom: "-2%", width: "52%" }}>
           <svg viewBox="0 0 300 220" className="block w-full">
-            <defs>
-              <filter id="hv-grain">
-                <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch" />
-                <feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .12 0" />
-                <feComposite in2="SourceGraphic" operator="in" />
-              </filter>
-            </defs>
             <path
               d="M18 150C6 104 38 62 88 52c44-9 62-46 112-38 52 8 92 56 84 104-8 50-56 60-98 82-46 24-110 26-142-4-12-11-21-26-26-46z"
               fill="var(--tone-2)"
-            />
-            <path
-              d="M18 150C6 104 38 62 88 52c44-9 62-46 112-38 52 8 92 56 84 104-8 50-56 60-98 82-46 24-110 26-142-4-12-11-21-26-26-46z"
-              filter="url(#hv-grain)"
             />
           </svg>
         </Layer>
