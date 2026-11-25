@@ -65,17 +65,21 @@ Every item from the audit inventory ([01-audit.md §10](docs/redesign/01-audit.m
 | C14 | Client portfolios | Generic brief entry | The Arinze Obidiegwu portfolio |
 | C15 | Ednaimo dates | Unknown | Oct – Nov 2026 |
 | C16 | Tools | — | + WordPress (new CV) |
-| C17 | Bellviv metrics | In the CV | Not shown (your decision) |
+| C17 | Bellviv metrics | In the CV | ✅ Shown in the Bellviv experience summary (approved) |
 
 ## 3. Missing information
 
 | Where | Field | Status |
 |---|---|---|
-| FoodEase, CheckRef, Surf n' Turf | dates within Fusion Intelligence | ❓ Omitted from the role line until you supply them |
-| Arinze Obidiegwu portfolio | engagement (contract? freelance?), dates | ❓ Omitted |
-| Horde Budgeting App | link | Coming from you ("Link to come" tag shows) |
-| About → Journey | origin story ("Before 2022") | ✏️ Visible draft slot, not written by me |
-| NMDB | live URL is a `reachcinema.io` subdomain | OK for now (your decision); swap it if it changes |
+| FoodEase | dates | ✅ Jun 2023 – Present (ongoing) |
+| CheckRef | dates | ✅ Duration only: "About 8 months" (no exact dates, on purpose) |
+| Surf n' Turf | dates | ✅ Nov – Dec 2025 |
+| Arinze Obidiegwu portfolio | engagement, dates | ✅ Freelance, 2025 (listed under the timeline because the month is unknown) |
+| Horde Budgeting App | link | ✅ No public link. Shown as personal · in progress · Jun 2024 – Present |
+| About → Journey | origin story ("Before 2022") | ⏳ Placeholder kept on purpose until you write it |
+| ISeeMemories | storage and preview implementation | ✅ Deliberately not described (not confirmed) |
+
+**Classification (as you specified):** Fusion Intelligence = FoodEase, NMDB, CheckRef, Surf n' Turf · Independent contracts = Ednaimo, ORIPA, Sedic, ISeeMemories · Freelance = Arinze Obidiegwu · Personal = Horde.
 
 ## 4. Draft copy (rewrite in your voice)
 
@@ -92,7 +96,7 @@ Each of these shows a dashed **Draft** tag on the page, except where noted.
 | Explorations | Six shelf blurbs | `data/lab.ts` → `labAreas` (no tag) |
 | Writing | Intro lead ("things I've figured out and want to remember…") | `app/writing/page.tsx` (no tag) |
 | Writing | Topic for each dev.to post (React Hooks → Development notes; Open source → Lessons) | `data/writing.ts` |
-| ISeeMemories | Overview and brief headings and bodies; technical notes (drafted from verified facts) | `data/projects.ts` (technical notes carry a Draft note) |
+| ISeeMemories | Overview and brief headings and bodies (technical notes are verified facts only) | `data/projects.ts` (no tag) |
 | All projects | Subtitles, intros, image alt text and captions | `data/projects.ts` (no tag) |
 
 ## 5. Images
@@ -113,13 +117,15 @@ Each of these shows a dashed **Draft** tag on the page, except where noted.
 | Surf n' Turf | ✅ homepage | optional (10 in Cloudinary) | |
 | Arinze portfolio | ✅ homepage | optional (26 in Cloudinary) | |
 
-### ⚠️ Privacy: images already in Cloudinary
+### ✅ Privacy: images in Cloudinary
 
-The old site showed **every** image in each folder publicly, through its carousel. The new site only shows the images listed in `data/projects.ts`. These files contain personal details; I haven't used them, and you may want to delete or blur them in Cloudinary:
-- `Iseememories/iseememories-11`: profile settings (name, phone, address fields)
-- `Iseememories/iseememories-20`, `-21`: checkout with a shipping address
-- `Checkref/checkref-recruiter-13`: candidate details including a **phone number**
-- Most CheckRef app screens show your name and `priscaebube+…@gmail.com` test aliases. That's fine if you're happy with it.
+With your approval, these were **replaced in Cloudinary** with versions where the phone number, street address and zipcode are pixelated:
+- `Iseememories/iseememories-11` (profile)
+- `Iseememories/iseememories-20` (checkout, now used in the case study gallery)
+- `Iseememories/iseememories-21` (address modal)
+- `Checkref/checkref-recruiter-13` (candidate phone)
+
+The original unblurred files are kept locally only, in the session scratchpad. CheckRef screens still show your name and `priscaebube+…` test emails; you've said that's fine.
 
 ## 6. Removed or relocated
 

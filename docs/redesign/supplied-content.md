@@ -130,3 +130,25 @@ Verified facts given directly by Prisca (25 Nov 2026). These rank alongside the 
 - **Pake Group projects:** text only in the Pake Group experience entry. No project pages.
 - **Unused starter SVGs:** delete.
 - **Titles:** ISeeMemories = **Full-Stack Engineer**; ORIPA, Sedic and Ednaimo = **Frontend Engineer** (contract).
+
+## Content answers (25 Nov 2026, after Checkpoint 4)
+
+- **Classification:**
+  - Fusion Intelligence (employment): FoodEase, NMDB, CheckRef, Surf n' Turf.
+  - Independent contracts: Ednaimo, ORIPA, Sedic Group, ISeeMemories.
+  - Freelance: Arinze Obidiegwu portfolio.
+  - Personal: Horde Budgeting App.
+- **FoodEase:** Jun 2023 – Present (ongoing, within Fusion Intelligence).
+- **CheckRef:** about eight months, completed. **No exact dates**; use the duration only.
+- **Surf n' Turf:** about Nov – Dec 2025.
+- **Arinze Obidiegwu portfolio:** freelance, 2025.
+- **Horde:** personal project, in progress, Jun 2024 – Present, no public link.
+- **Origin story:** leave as a placeholder until Prisca supplies it. Do not invent one.
+- **ISeeMemories:** existing facts are accurate. Do **not** invent storage or preview implementation details.
+- **Verified outcomes:**
+  - FoodEase: onboarding about 3 weeks → 2 days.
+  - ISeeMemories: 1,000+ users in the first year; MVP used by paying customers.
+  - **Bellviv: website visibility 0% → 50%; about 15% growth in website users within six months** (now approved for display).
+- **Links:** Surf n' Turf live link is https://foodease-surf-n-turf.cap.reachcinema.io. CheckRef live link removed.
+- **Ednaimo:** the landing page was part of the redesign (cover confirmed).
+- **Privacy:** ISeeMemories 11/20/21 and CheckRef recruiter-13 were replaced in Cloudinary with blurred versions (phone, street, zipcode), with Prisca's approval.

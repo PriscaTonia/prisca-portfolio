@@ -48,7 +48,8 @@ export function Timeline({ roles, now = new Date() }: { roles: Role[]; now?: Dat
         {undated.length ? (
           <li className="flex items-center gap-2">
             <span aria-hidden className="h-2 w-6 rounded-full border border-dashed border-accent" />
-            Undated contract{undated.length > 1 ? "s" : ""}: {undated.map((u) => u.org).join(", ")}
+            Not drawn (month unknown):{" "}
+            {undated.map((u) => `${u.org} (${u.kind === "freelance" ? "freelance" : "contract"}${u.dates ? `, ${u.dates}` : ""})`).join("; ")}
           </li>
         ) : null}
       </ul>
@@ -83,7 +84,7 @@ export function Timeline({ roles, now = new Date() }: { roles: Role[]; now?: Dat
                   <p className="text-[14px] text-muted">
                     {r.role} · {r.dates}
                     {r.partTime ? " · Part-time" : ""}
-                    {r.kind === "contract" ? " · Contract" : ""}
+                    {r.kind === "contract" ? " · Contract" : r.kind === "freelance" ? " · Freelance" : ""}
                   </p>
                 </div>
                 <div aria-hidden className="relative h-3 rounded-full bg-bg/60">
@@ -98,7 +99,7 @@ export function Timeline({ roles, now = new Date() }: { roles: Role[]; now?: Dat
                   <span
                     className={cn(
                       "absolute inset-y-0 rounded-full",
-                      r.kind === "contract" ? "bg-accent" : r.partTime ? "bg-ink/40" : "bg-ink"
+                      r.kind !== "employment" ? "bg-accent" : r.partTime ? "bg-ink/40" : "bg-ink"
                     )}
                     style={{ left: `${left}%`, width: `max(${width}%, 8px)` }}
                   />

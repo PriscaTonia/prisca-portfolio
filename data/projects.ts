@@ -101,8 +101,6 @@ export const projects: Project[] = [
       { value: "1,000+", label: "users within its first year" },
       { value: "MVP", label: "shipped and used by paying customers" },
     ],
-    draftNote:
-      "Technical notes are drafted from verified facts only. Add specifics you're happy to share, for example how uploads were stored or how previews were rendered.",
     stack: [
       "Next.js",
       "TypeScript",
@@ -190,9 +188,9 @@ export const projects: Project[] = [
         height: 1928,
       },
       {
-        src: `${CLD}/v1763906215/${FOLDER}/Iseememories/iseememories-7_wpryhg.png`,
-        alt: "FAQ section beside a wall of colourful destination book covers.",
-        caption: "FAQ and the range of cover designs.",
+        src: `${CLD}/v1795622664/${FOLDER}/Iseememories/iseememories-20_rw8cgq.png`,
+        alt: "Checkout page: shipping address (personal details blurred), shipping options and an order summary with a Place order button.",
+        caption: "Checkout & payment: the last step of the journey.",
         width: 3360,
         height: 1926,
       },
@@ -214,6 +212,7 @@ export const projects: Project[] = [
     role: "Frontend Engineer",
     engagement: "Employment",
     employer: "Fusion Intelligence",
+    dates: "Jun 2023 – Present",
     scope: "FoodEase Office: admin interfaces, landing page, onboarding",
     scopeNote:
       "My work was on FoodEase Office, the administrative side of the platform. I didn't build the point-of-sale or the restaurant ordering systems.",
@@ -314,7 +313,7 @@ export const projects: Project[] = [
     ],
     source: "merged",
     review:
-      "Repo copy described order and kitchen processing; replaced with the FoodEase Office scope. Dates within Fusion Intelligence unknown.",
+      "Repo copy described order and kitchen processing; replaced with the FoodEase Office scope. Dates supplied by Prisca (ongoing).",
   },
   {
     slug: "nmdb",
@@ -564,6 +563,7 @@ export const projects: Project[] = [
     role: "Sole Frontend Developer",
     engagement: "Employment",
     employer: "Fusion Intelligence",
+    duration: "About 8 months",
     scope: "New frontend, from structure to handover",
     scopeNote: "I built and deployed the frontend, then handed it over.",
     summary:
@@ -866,6 +866,7 @@ export const projects: Project[] = [
     role: "Frontend Engineer",
     engagement: "Employment",
     employer: "Fusion Intelligence",
+    dates: "Nov – Dec 2025",
     summary:
       "A restaurant website where customers browse the menu, place orders, book tables and track their meals.",
     intro:
@@ -947,7 +948,7 @@ export const projects: Project[] = [
     ],
     source: "merged",
     review:
-      "Listed in the brief as 'Soft and Tough' (same project). Live URL changed from surfnturfng.com to the reachcinema.io build (Prisca, Nov 2026). Repo copy refined to remove marketing phrasing ('seamless', 'effortless', 'optimised for conversions'). Dates unknown.",
+      "Listed in the brief as 'Soft and Tough' (same project). Live URL changed from surfnturfng.com to the reachcinema.io build (Prisca, Nov 2026). Repo copy refined to remove marketing phrasing ('seamless', 'effortless', 'optimised for conversions'). Dates: about Nov – Dec 2025 (Prisca).",
   },
   {
     slug: "caephas-portfolio",
@@ -959,6 +960,8 @@ export const projects: Project[] = [
     order: 9,
     caseStudy: "summary",
     role: "Frontend Engineer",
+    engagement: "Freelance",
+    dates: "2025",
     summary:
       "A responsive portfolio website presenting Arinze Obidiegwu's work, experience and contact details.",
     intro:
@@ -1060,6 +1063,6 @@ export const projects: Project[] = [
     ],
     source: "merged",
     review:
-      "The brief's 'Portfolio websites (clients)' entry. Arinze's is the only client portfolio. Slug kept for URL continuity. Engagement and dates unknown.",
+      "The brief's 'Portfolio websites (clients)' entry. Arinze's is the only client portfolio. Slug kept for URL continuity. Freelance, 2025 (Prisca).",
   },
 ];

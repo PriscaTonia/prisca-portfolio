@@ -29,7 +29,7 @@ export interface Project {
   placeholder?: boolean;
 
   role?: string;
-  engagement?: "Employment" | "Independent contract" | (string & {});
+  engagement?: "Employment" | "Independent contract" | "Freelance" | (string & {});
   employer?: string;
   dates?: string;
   duration?: string;
@@ -62,7 +62,7 @@ export interface Role {
   role: string;
   dates?: string;
   current?: boolean;
-  kind: "employment" | "contract";
+  kind: "employment" | "contract" | "freelance";
   partTime?: boolean;
   summary?: string;
   projectSlugs: string[];

@@ -281,7 +281,7 @@ export default function AboutPage() {
 
           <div>
             <div className="flex items-baseline justify-between border-t border-ink pt-3">
-              <h3 className="label text-ink">Independent contracts</h3>
+              <h3 className="label text-ink">Independent contracts &amp; freelance</h3>
               <span className="font-mono text-[12px] text-muted">{pad2(contracts.length)}</span>
             </div>
             <ul>
@@ -294,7 +294,7 @@ export default function AboutPage() {
                       <p className="font-mono text-[12.5px] text-muted">{r.dates ?? "Contract"}</p>
                     </div>
                     <p className="mt-1 text-[15.5px] text-muted">
-                      {r.role} · Contract{slug ? <span aria-hidden className="ml-1 inline-block transition-transform duration-300 group-hover:translate-x-1"> →</span> : null}
+                      {r.role} · {r.kind === "freelance" ? "Freelance" : "Contract"}{slug ? <span aria-hidden className="ml-1 inline-block transition-transform duration-300 group-hover:translate-x-1"> →</span> : null}
                     </p>
                   </>
                 );

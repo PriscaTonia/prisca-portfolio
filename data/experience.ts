@@ -39,14 +39,14 @@ export const roles: Role[] = [
     kind: "employment",
     partTime: true,
     summary:
-      "Researched, designed and built six WordPress websites from scratch, maintained them, and handled SEO improvements across the company's sites.",
+      "Researched, designed and built six WordPress websites from scratch and maintained them. SEO work took website visibility from 0% to 50% and contributed to about 15% growth in website users within six months.",
     projectSlugs: [],
     start: "2022-01",
     end: "2023-12",
     source: "existing",
   },
 
-  // ── Independent contracts ────────────────────────────────
+  // ── Independent contracts & freelance ────────────────────
   {
     org: "Ednaimo",
     role: "Frontend Engineer",
@@ -87,10 +87,20 @@ export const roles: Role[] = [
     end: "2024-12",
     source: "brief",
   },
+  {
+    org: "Arinze Obidiegwu",
+    role: "Frontend Engineer",
+    dates: "2025",
+    kind: "freelance",
+    projectSlugs: ["caephas-portfolio"],
+    // Year only: no start/end, so it's listed under the timeline, not drawn as a bar.
+    source: "existing",
+  },
 ];
 
 export const employment = roles.filter((r) => r.kind === "employment");
-export const contracts = roles.filter((r) => r.kind === "contract");
+/** Independent work: contracts and freelance projects. */
+export const contracts = roles.filter((r) => r.kind !== "employment");
 
 /** Before the timeline (which starts in 2022). From the site + CV. */
 export const education = {

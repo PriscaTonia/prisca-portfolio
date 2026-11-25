@@ -5,7 +5,6 @@ import type { LabEntry } from "@/data/types";
 import { pad2 } from "@/lib/format";
 import { Container } from "@/components/layout/section";
 import { Arrow } from "@/components/ui/button";
-import { Tag } from "@/components/ui/tag";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -86,7 +85,7 @@ export default function ExplorationsPage() {
                           </p>
                           <p className="mono-meta mt-1">
                             {formatLabel(e.format)} · {status[e.status].label}
-                            {e.started ? ` · since ${e.started}` : ""}
+                            {e.started ? ` · ${e.started} – ${e.status === "in-progress" ? "Present" : ""}` : ""}
                           </p>
                           <p className="mt-2 text-[14.5px] leading-relaxed text-muted">{e.summary}</p>
                           {e.links?.length ? (
@@ -99,11 +98,7 @@ export default function ExplorationsPage() {
                                 </li>
                               ))}
                             </ul>
-                          ) : (
-                            <p className="mt-3">
-                              <Tag variant="dashed">Link to come</Tag>
-                            </p>
-                          )}
+                          ) : null}
                         </li>
                       ))}
                     </ul>
