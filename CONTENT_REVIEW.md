@@ -99,7 +99,7 @@ Each of these shows a dashed **Draft** tag on the page, except where noted.
 
 **How to add images:** upload to a Cloudinary folder (name the files `cover`, `01`, `02`, `03`), then run `npm run images "Prisca - Portfolio Project Images/<Folder>"` and paste the output into the project.
 - **Cover:** ≥ 2400×1600, with key content in the central ~2000×1200. It gets cropped to 2:1, 4:3, 5:4 and 16:10.
-- **Gallery:** 3 images, ~2000px wide. They're shown uncropped.
+- **Gallery:** up to 10 images, ~2000px wide, shown uncropped. The first 3 appear on the page and all of them open in the lightbox (“View all N images”).
 
 | Project | Cover | Gallery (3) | Notes |
 |---|---|---|---|
@@ -107,7 +107,7 @@ Each of these shows a dashed **Draft** tag on the page, except where noted.
 | FoodEase | ✅ landing page (#1) | ✅ #11, #12 onboarding · #8 landing (inventory/analytics) | 🖼 **No FoodEase Office admin screenshots exist.** That's the work the page describes, so 2–3 admin screens (inventory, ledger, staff) would help a lot. |
 | CheckRef | ✅ company dashboard (recruiter-4) | ✅ admin-1 · recruiter-6 · signup | Switched from the marketing page to an app screen (it's certain you built it). Shows your test data. |
 | NMDB | ✅ cover | ✅ 03 movie browsing · 06 film profile · 10 people profile | Uploaded by you (Nov 2026) |
-| Ednaimo | ✅ cover (landing page) | ✅ 03 children's library · 05 parent overview · 09 teacher assignments | Shows test names (e.g. “Ada Jnr”). ❓ Was the landing page part of your redesign scope? If not, use an app screen as the cover. |
+| Ednaimo | ✅ cover (landing page) | ✅ 03 children's library · 05 parent overview · 09 teacher assignments | Landing page confirmed as part of the redesign (Prisca). Shows test names (e.g. “Ada Jnr”). |
 | Sedic Group | ✅ cover | ✅ 01 about · 03 subsidiaries · 05 gallery | |
 | ORIPA | ✅ cover | ✅ 01 mandate · 04 sectors · 06 opportunities | |
 | Surf n' Turf | ✅ homepage | optional (10 in Cloudinary) | |

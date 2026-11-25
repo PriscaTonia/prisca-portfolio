@@ -16,6 +16,7 @@ import { PrevNext } from "@/components/ui/prev-next";
 import { ProjectMedia } from "@/components/projects/project-media";
 import { ProjectTile } from "@/components/projects/project-tile";
 import { JsonLd } from "@/components/seo/json-ld";
+import { Gallery } from "@/components/projects/gallery";
 import { cn } from "@/lib/utils";
 
 export const dynamicParams = false;
@@ -85,10 +86,6 @@ function DetailSection({
     </section>
   );
 }
-
-/** Gallery images keep their own shape so screenshots aren't cropped. */
-const ratioOf = (img: { width?: number; height?: number }, fallback: string) =>
-  img.width && img.height ? `${img.width}/${img.height}` : fallback;
 
 function sectionsFor(p: Project) {
   const s: { id: string; name: string }[] = [{ id: "overview", name: "Overview" }];
@@ -346,22 +343,7 @@ export default async function ProjectPage({ params }: Params) {
         {/* Showcase */}
         {p.gallery?.length ? (
           <DetailSection id="showcase" n={num("showcase")} name="Showcase">
-            <div className="grid items-start gap-5 desk:grid-cols-[7fr_5fr]">
-              {p.gallery.slice(0, 1).map((g) => (
-                <figure key={g.src}>
-                  <ProjectMedia image={g} ratio={ratioOf(g, "4/3")} label={g.alt} zoom={false} sizes="(min-width: 960px) 50vw, 92vw" />
-                  {g.caption ? <figcaption className="mono-meta mt-3">{g.caption}</figcaption> : null}
-                </figure>
-              ))}
-              <div className="grid content-start gap-5">
-                {p.gallery.slice(1, 3).map((g) => (
-                  <figure key={g.src}>
-                    <ProjectMedia image={g} ratio={ratioOf(g, "16/10")} label={g.alt} zoom={false} sizes="(min-width: 960px) 36vw, 92vw" />
-                    {g.caption ? <figcaption className="mono-meta mt-3">{g.caption}</figcaption> : null}
-                  </figure>
-                ))}
-              </div>
-            </div>
+            <Gallery images={p.gallery} title={p.title} />
           </DetailSection>
         ) : null}
 
