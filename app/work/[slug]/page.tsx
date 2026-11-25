@@ -364,16 +364,6 @@ export default async function ProjectPage({ params }: Params) {
           </DetailSection>
         ) : null}
 
-        {/* Format note (summaries) */}
-        {!isFull ? (
-          <Container>
-            <p className="rounded-[14px] border border-line px-5 py-4 text-[15px] text-muted">
-              {p.types.includes("corporate")
-                ? "Short project page: the right length for a website build."
-                : "Project summary: a fuller case study can slot into this same template."}
-            </p>
-          </Container>
-        ) : null}
 
         {/* Related */}
         {related.length ? (
