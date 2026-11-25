@@ -106,10 +106,10 @@ Each of these shows a dashed **Draft** tag on the page, except where noted.
 | ISeeMemories | ✅ homepage (#1) | ✅ #15 upload · #17 cover options · #16 page overview | Proposed picks; swap any you like |
 | FoodEase | ✅ landing page (#1) | ✅ #11, #12 onboarding · #8 landing (inventory/analytics) | 🖼 **No FoodEase Office admin screenshots exist.** That's the work the page describes, so 2–3 admin screens (inventory, ledger, staff) would help a lot. |
 | CheckRef | ✅ company dashboard (recruiter-4) | ✅ admin-1 · recruiter-6 · signup | Switched from the marketing page to an app screen (it's certain you built it). Shows your test data. |
-| NMDB | 🖼 needed | 🖼 recommended | Featured, so placeholders are prominent on Home and Work |
-| Ednaimo | 🖼 needed | 🖼 recommended | Featured. Avoid identifiable children's data. |
-| Sedic Group | 🖼 needed | optional | |
-| ORIPA | 🖼 needed | optional | |
+| NMDB | ✅ cover | ✅ 03 movie browsing · 06 film profile · 10 people profile | Uploaded by you (Nov 2026) |
+| Ednaimo | ✅ cover (landing page) | ✅ 03 children's library · 05 parent overview · 09 teacher assignments | Shows test names (e.g. “Ada Jnr”). ❓ Was the landing page part of your redesign scope? If not, use an app screen as the cover. |
+| Sedic Group | ✅ cover | ✅ 01 about · 03 subsidiaries · 05 gallery | |
+| ORIPA | ✅ cover | ✅ 01 mandate · 04 sectors · 06 opportunities | |
 | Surf n' Turf | ✅ homepage | optional (10 in Cloudinary) | |
 | Arinze portfolio | ✅ homepage | optional (26 in Cloudinary) | |
 
