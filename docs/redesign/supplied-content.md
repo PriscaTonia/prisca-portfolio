@@ -122,3 +122,11 @@ Verified facts given directly by Prisca (25 Nov 2026). These rank alongside the 
 9. **Degree:** show the certificate name, **B.Eng. in Computer Engineering**. (The course was Electronic & Computer Engineering.)
 10. **Profile photo:** use it on the About page.
 11. **NMDB link** `fusion-nmdb.cap.reachcinema.io` may appear publicly for now.
+
+## Checkpoint 2 answers (25 Nov 2026)
+
+- **CV:** Prisca will replace `public/Prisca-Resume.pdf` with the updated CV herself.
+- **Bellviv metrics:** not shown in the experience summary (default). If one is ever shown, it's "about 15% user growth in six months".
+- **Pake Group projects:** text only in the Pake Group experience entry. No project pages.
+- **Unused starter SVGs:** delete.
+- **Titles:** ISeeMemories = **Full-Stack Engineer**; ORIPA, Sedic and Ednaimo = **Frontend Engineer** (contract).

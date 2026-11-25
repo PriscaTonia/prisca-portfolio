@@ -27,9 +27,9 @@ Summary:
 | C5 | ISeeMemories payment provider | "Paystack" (repo) | Unnamed | ✅ Removed |
 | C6 | Stacks | Repo extras (React Hook Form, React Hot Toast, MongoDB, Mongoose) | Brief stacks | ✅ Union of both, minus Paystack |
 | C7 | ISeeMemories outcome | "1,00+ users… first few months" (old CV) | "over 1,000 users in its first year" | ✅ Brief / new CV |
-| C8 | ISeeMemories title and role | "I See Memories", "Full-stack Engineer" (repo); "Full-Stack Engineer" (new CV) | "ISeeMemories", "Full-Stack Developer" (brief) | Brief applied. ❓ Engineer or Developer? (minor) |
+| C8 | ISeeMemories title and role | "I See Memories", "Full-stack Engineer" (repo); "Full-Stack Engineer" (new CV) | "ISeeMemories", "Full-Stack Developer" (brief) | ✅ **Full-Stack Engineer** (your call) |
 | C9 | FoodEase description | Orders, kitchen, real-time order dashboards (repo) | FoodEase Office only | ✅ Brief + new CV, with the scope note |
-| C10 | Contract role titles | "Frontend Engineer" (new CV) | "Frontend Developer (Contract)" (supplied) | Supplied applied. ❓ (minor) |
+| C10 | Contract role titles | "Frontend Engineer" (new CV) | "Frontend Developer (Contract)" (supplied) | ✅ **Frontend Engineer** (your call) |
 | C11 | Job title | "Frontend Engineer" (metadata, CVs) | "Software Engineer" | ✅ Brief on the site. The CV PDF is yours to keep as it is. |
 | C12 | Degree name | "BEng, Electronic & Computer Engineering" (site) | "B.Eng. in Computer Engineering" (certificate) | ✅ Certificate name |
 | C13 | Surf n' Turf identity | `surfnturf` (repo) | "Soft and Tough" (brief) | ✅ The same project: Fusion Intelligence, slug `surfnturf` |
@@ -44,7 +44,7 @@ Summary:
 | Surf n' Turf, FoodEase, CheckRef | dates within Fusion Intelligence | Omitted from the role line (only NMDB has dates) |
 | Arinze Obidiegwu portfolio | engagement, dates | Placeholder |
 | Horde Budgeting App (Lab) | link | Coming from you |
-| `public/Prisca-Resume.pdf` | still the **old** CV | ❓ Drop the new PDF into `public/` (see Checkpoint 2) |
+| `public/Prisca-Resume.pdf` | still the **old** CV | You will replace it with the updated CV |
 | About | origin story ("Before 2022: how it started") | Visible draft slot. Not written by me. |
 
 ## 4. Draft copy (to rewrite)
@@ -81,4 +81,4 @@ Each slot is a **cover** (supply ≥ 2400×1600; keep key content in the central
 | Old hero copy and section headers | Replaced by the brief's copy | Relocated: no longer shown |
 | "Schedule Call" button | Removed | ✅ Your decision; can come back later |
 | "Product Delivery" and "Soft Skills" lists | Folded into "How I build" | ✅ Your decision |
-| Unused `public/projects/*.svg` and starter SVGs | — | Proposed deletion (Checkpoint 2) |
+| Unused `public/projects/*.svg` and starter SVGs | — | ✅ Delete (approved) |
