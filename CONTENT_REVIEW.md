@@ -1,84 +1,130 @@
 # Content review — prisca.dev redesign
 
-Prisca's to-do list for content. This is v0.2 (after Checkpoint 1 answers) and gets updated each phase.
-Legend: ❓ = needs your decision · ✏️ = draft to rewrite · 🖼 = image needed · ✅ = resolved
+This is your to-do list for content. Version 1.0, at Checkpoint 4.
+Legend: ❓ needs your decision · ✏️ draft for you to rewrite · 🖼 image needed · ⚠️ privacy check · ✅ resolved
 
-Sources: the brief's seed facts, [supplied-content.md](docs/redesign/supplied-content.md) (your answers and the **updated CV**), then the repo and live site, then placeholders.
+Sources, in order of precedence:
+1. The brief's seed facts and [supplied-content.md](docs/redesign/supplied-content.md) (your answers and the updated CV)
+2. The previous site and repo
+3. Placeholders
 
-## 1. Inventory
+Every record in `data/` carries a `source` marker, and conflicts are kept in each project's `review` field.
 
-The full mapping is in [docs/redesign/02-mapping.md](docs/redesign/02-mapping.md), and the source inventory is in [docs/redesign/01-audit.md §10](docs/redesign/01-audit.md).
-Summary:
-- 5 repo projects, all kept and merged with the brief.
-- 4 brief/supplied projects added.
-- Skills, education, certifications and early experience move to About.
-- 2 dev.to posts → Writing.
-- CV → About, Contact and footer.
-- Horde → Lab.
+---
 
-## 2. Conflicts
+## 1. Inventory cross-check (old site → new site)
 
-| # | Item | Existing value (source) | Brief / supplied value | Decision |
-|---|---|---|---|---|
-| C1 | CheckRef engagement | Contract, 10/2024 – 09/2025, UK (old CV) | Fusion Intelligence employment (brief + new CV) | ✅ Fusion Intelligence |
-| C2 | CheckRef role | "Lead Frontend Engineer" (repo) | Sole Frontend Developer | ✅ Brief |
-| C3 | CheckRef maintenance | "Built and maintained…" (repo) | Handed over after deployment | ✅ "maintained" removed |
-| C4 | Old CV metrics (85% / 80% / 60% / +50% retention) | Old CV | Not in the new CV | ✅ Dropped |
-| C5 | ISeeMemories payment provider | "Paystack" (repo) | Unnamed | ✅ Removed |
-| C6 | Stacks | Repo extras (React Hook Form, React Hot Toast, MongoDB, Mongoose) | Brief stacks | ✅ Union of both, minus Paystack |
-| C7 | ISeeMemories outcome | "1,00+ users… first few months" (old CV) | "over 1,000 users in its first year" | ✅ Brief / new CV |
-| C8 | ISeeMemories title and role | "I See Memories", "Full-stack Engineer" (repo); "Full-Stack Engineer" (new CV) | "ISeeMemories", "Full-Stack Developer" (brief) | ✅ **Full-Stack Engineer** (your call) |
-| C9 | FoodEase description | Orders, kitchen, real-time order dashboards (repo) | FoodEase Office only | ✅ Brief + new CV, with the scope note |
-| C10 | Contract role titles | "Frontend Engineer" (new CV) | "Frontend Developer (Contract)" (supplied) | ✅ **Frontend Engineer** (your call) |
-| C11 | Job title | "Frontend Engineer" (metadata, CVs) | "Software Engineer" | ✅ Brief on the site. The CV PDF is yours to keep as it is. |
-| C12 | Degree name | "BEng, Electronic & Computer Engineering" (site) | "B.Eng. in Computer Engineering" (certificate) | ✅ Certificate name |
-| C13 | Surf n' Turf identity | `surfnturf` (repo) | "Soft and Tough" (brief) | ✅ The same project: Fusion Intelligence, slug `surfnturf` |
-| C14 | Arinze portfolio | One named project (repo) | "Portfolio websites (clients)" (brief) | ✅ It is that entry (the only client portfolio) |
-| C15 | Ednaimo dates | Unknown (brief) | Oct – Nov 2026 (supplied) | ✅ Supplied |
-| C16 | Tools row | Brief table has no WordPress | New CV lists WordPress | ✅ WordPress added to Tools |
+Every item from the audit inventory ([01-audit.md §10](docs/redesign/01-audit.md)), with where it went. **Nothing was dropped without a decision.**
+
+| Old content | New home | Status |
+|---|---|---|
+| Project: Surf n' Turf | `/work/surfnturf` (additional) | ✅ |
+| Project: Checkref | `/work/checkref` (featured) | ✅ |
+| Project: FoodEase | `/work/foodease` (featured, home) | ✅ |
+| Project: I See Memories | `/work/iseememories` (full case study, home) | ✅ |
+| Project: Arinze Obidiegwu portfolio | `/work/caephas-portfolio` (additional) | ✅ |
+| Hero copy, taglines, "Let's build something beautiful" | Replaced by the fixed hero copy | ✅ relocated (not shown) |
+| Profile photo `prisca.JPG` | About intro | ✅ |
+| Profile card: "Software Engineer (Frontend)", Specialty, Focus | About → Field notes; Capabilities "Also" row | ✅ |
+| CV download | About intro, Contact, footer (new PDF; old URL redirects) | ✅ |
+| LinkedIn, GitHub, email | Footer, Contact, home contact band | ✅ |
+| Technical Skills: Frontend Engineering, UI Systems & Styling | About → Capabilities (+ "Also" row) | ✅ |
+| Technical Skills: Product Delivery, Soft Skills | About → "How I build" principles | ✅ (your decision) |
+| Education + 10 courses | About → 08 Education & early experience | ✅ |
+| Certifications: Genesys, HNG (with Drive links) | About → 08, "View certificate" links | ✅ |
+| Contact copy, "Send Message" | Replaced by the brief's contact copy; email CTA | ✅ |
+| "Schedule Call" | Removed | ✅ (your decision) |
+| Blog header "My Tech Journal" | Replaced by "Notes from the work." | ✅ relocated |
+| dev.to posts (2) | `/writing`, as real entries linking out | ✅ |
+| Metadata, keywords, Twitter `@EbubePrisca` | `app/layout.tsx` (now "Software Engineer") | ✅ |
+| OG / Twitter images | Kept; alt text fixed | ✅ |
+| Favicons | Kept | ✅ |
+| CV: Pake Group projects (Church of Jesus, Pake Purchase, Car Dealership) | Pake Group experience summary (text only) | ✅ (your decision) |
+| CV: Hotels.ng, El Academy, Genesys | About → 08 | ✅ |
+| CV: Horde Budgeting App | `/explorations` → Personal projects (in progress) | ✅ |
+| `/projects/*`, `/blog`, `/Prisca-Resume.pdf`, `/#section` links | Permanent redirects / hash forwarding | ✅ |
+| Unused starter SVGs | Deleted | ✅ (your decision) |
+
+## 2. Conflicts (all resolved)
+
+| # | Item | Old value | Used now |
+|---|---|---|---|
+| C1 | CheckRef engagement | Contract 10/2024–09/2025 (old CV) | Fusion Intelligence (brief + new CV) |
+| C2 | CheckRef role | "Lead Frontend Engineer" | Sole Frontend Developer |
+| C3 | CheckRef maintenance | "built and maintained" | "built, deployed and handed over" |
+| C4 | Old CV metrics (85% / 80% / 60% / +50% retention) | Old CV | Dropped |
+| C5 | Payment provider | "Paystack" | Not named |
+| C6 | Stacks | Repo vs brief | Union of both, minus Paystack |
+| C7 | ISeeMemories users | "1,00+… first few months" | "1,000+ users within its first year" |
+| C8 | ISeeMemories role and title | "Full-stack Engineer", "I See Memories" | Full-Stack Engineer, ISeeMemories |
+| C9 | FoodEase scope | Orders, kitchen, real-time order dashboards | FoodEase Office only, with a scope note |
+| C10 | Contract titles | — | Frontend Engineer |
+| C11 | Job title | Frontend Engineer | Software Engineer (the CV PDF is unchanged) |
+| C12 | Degree | "Electronic & Computer Engineering" | B.Eng. in Computer Engineering (certificate name) |
+| C13 | Soft and Tough | Brief name | Surf n' Turf (same project), Fusion Intelligence |
+| C14 | Client portfolios | Generic brief entry | The Arinze Obidiegwu portfolio |
+| C15 | Ednaimo dates | Unknown | Oct – Nov 2026 |
+| C16 | Tools | — | + WordPress (new CV) |
+| C17 | Bellviv metrics | In the CV | Not shown (your decision) |
 
 ## 3. Missing information
 
-| Page / entry | Field | Status |
+| Where | Field | Status |
 |---|---|---|
-| Surf n' Turf, FoodEase, CheckRef | dates within Fusion Intelligence | Omitted from the role line (only NMDB has dates) |
-| Arinze Obidiegwu portfolio | engagement, dates | Placeholder |
-| Horde Budgeting App (Lab) | link | Coming from you |
-| `public/Prisca-Resume.pdf` | still the **old** CV | You will replace it with the updated CV |
-| About | origin story ("Before 2022: how it started") | Visible draft slot. Not written by me. |
+| FoodEase, CheckRef, Surf n' Turf | dates within Fusion Intelligence | ❓ Omitted from the role line until you supply them |
+| Arinze Obidiegwu portfolio | engagement (contract? freelance?), dates | ❓ Omitted |
+| Horde Budgeting App | link | Coming from you ("Link to come" tag shows) |
+| About → Journey | origin story ("Before 2022") | ✏️ Visible draft slot, not written by me |
+| NMDB | live URL is a `reachcinema.io` subdomain | OK for now (your decision); swap it if it changes |
 
-## 4. Draft copy (to rewrite)
+## 4. Draft copy (rewrite in your voice)
 
-Written in Phase 5/6 and listed here once written:
-- "How I build": four principles, folding in the old Product Delivery and Soft Skills lists ✏️ (you're sceptical, so review closely)
-- "Off-screen": three blurbs ✏️
-- About "Field notes" ✏️
-- One-line experience summaries (Fusion Intelligence, The Pake Group, Bellviv), condensed from the new CV ✏️
-- Writing topic assignment for the 2 dev.to posts ✏️
-- Image alt text and captions ✏️
+Each of these shows a dashed **Draft** tag on the page, except where noted.
 
-## 5. Images needed 🖼
-
-Each slot is a **cover** (supply ≥ 2400×1600; keep key content in the central ~2000×1200) plus an optional **gallery of 3** (~2000px wide, with alt text and a caption).
-
-| Project | Existing (Cloudinary) | Needed |
+| Page | Copy | File |
 |---|---|---|
-| ISeeMemories | 26 | Pick 1 cover + 3 gallery (full case study). I propose picks; you confirm. |
-| FoodEase | 13 | Pick 1 cover (+3). Check the screenshots show only FoodEase Office and no real customer data. |
-| CheckRef | 50+ | Pick 1 cover (+3). Check for real candidate or referee data. |
-| Surf n' Turf | 10 | Pick 1 cover |
-| Arinze portfolio | 26 | Pick 1 cover |
-| NMDB | **none** | 1 cover (+3 recommended) |
-| Ednaimo | **none** | 1 cover (+3 recommended). No identifiable children's data. |
-| ORIPA | **none** | 1 cover |
-| Sedic Group | **none** | 1 cover |
-| About | `prisca.JPG` | ✅ Used on About |
+| About | Field notes (4 rows) | `data/about.ts` → `fieldNotes` |
+| About | "How I build" (4 principles, folding in Product Delivery and Soft Skills). You were sceptical; read this closely. | `data/about.ts` → `principles` |
+| About | "What I enjoy working on", "Currently exploring" | `data/about.ts` |
+| About | Off-screen: Fashion, Creative projects, Learning | `data/about.ts` → `offScreen` |
+| About | Experience one-liners (Fusion Intelligence, Pake Group, Bellviv), condensed from the CV | `data/experience.ts` (no tag) |
+| Home | "In short" four columns | `app/page.tsx` → `inShort` (no tag) |
+| Explorations | Six shelf blurbs | `data/lab.ts` → `labAreas` (no tag) |
+| Writing | Intro lead ("things I've figured out and want to remember…") | `app/writing/page.tsx` (no tag) |
+| Writing | Topic for each dev.to post (React Hooks → Development notes; Open source → Lessons) | `data/writing.ts` |
+| ISeeMemories | Overview and brief headings and bodies; technical notes (drafted from verified facts) | `data/projects.ts` (technical notes carry a Draft note) |
+| All projects | Subtitles, intros, image alt text and captions | `data/projects.ts` (no tag) |
+
+## 5. Images
+
+**How to add images:** upload to a Cloudinary folder (name the files `cover`, `01`, `02`, `03`), then run `npm run images "Prisca - Portfolio Project Images/<Folder>"` and paste the output into the project.
+- **Cover:** ≥ 2400×1600, with key content in the central ~2000×1200. It gets cropped to 2:1, 4:3, 5:4 and 16:10.
+- **Gallery:** 3 images, ~2000px wide. They're shown uncropped.
+
+| Project | Cover | Gallery (3) | Notes |
+|---|---|---|---|
+| ISeeMemories | ✅ homepage (#1) | ✅ #15 upload · #17 cover options · #16 page overview | Proposed picks; swap any you like |
+| FoodEase | ✅ landing page (#1) | ✅ #11, #12 onboarding · #8 landing (inventory/analytics) | 🖼 **No FoodEase Office admin screenshots exist.** That's the work the page describes, so 2–3 admin screens (inventory, ledger, staff) would help a lot. |
+| CheckRef | ✅ company dashboard (recruiter-4) | ✅ admin-1 · recruiter-6 · signup | Switched from the marketing page to an app screen (it's certain you built it). Shows your test data. |
+| NMDB | 🖼 needed | 🖼 recommended | Featured, so placeholders are prominent on Home and Work |
+| Ednaimo | 🖼 needed | 🖼 recommended | Featured. Avoid identifiable children's data. |
+| Sedic Group | 🖼 needed | optional | |
+| ORIPA | 🖼 needed | optional | |
+| Surf n' Turf | ✅ homepage | optional (10 in Cloudinary) | |
+| Arinze portfolio | ✅ homepage | optional (26 in Cloudinary) | |
+
+### ⚠️ Privacy: images already in Cloudinary
+
+The old site showed **every** image in each folder publicly, through its carousel. The new site only shows the images listed in `data/projects.ts`. These files contain personal details; I haven't used them, and you may want to delete or blur them in Cloudinary:
+- `Iseememories/iseememories-11`: profile settings (name, phone, address fields)
+- `Iseememories/iseememories-20`, `-21`: checkout with a shipping address
+- `Checkref/checkref-recruiter-13`: candidate details including a **phone number**
+- Most CheckRef app screens show your name and `priscaebube+…@gmail.com` test aliases. That's fine if you're happy with it.
 
 ## 6. Removed or relocated
 
-| Item | Where it went | Status |
-|---|---|---|
-| Old hero copy and section headers | Replaced by the brief's copy | Relocated: no longer shown |
-| "Schedule Call" button | Removed | ✅ Your decision; can come back later |
-| "Product Delivery" and "Soft Skills" lists | Folded into "How I build" | ✅ Your decision |
-| Unused `public/projects/*.svg` and starter SVGs | — | ✅ Delete (approved) |
+| Item | Why |
+|---|---|
+| "Schedule Call" button | Duplicated email; your call to remove for now |
+| Old hero and section headings | Replaced by the brief's copy |
+| Starter SVGs, old shadcn components, framer-motion, `cloudinary` package | Unused after the redesign |

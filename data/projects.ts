@@ -125,6 +125,29 @@ export const projects: Project[] = [
       width: 3360,
       height: 1928,
     },
+    gallery: [
+      {
+        src: `${CLD}/v1763906211/${FOLDER}/Iseememories/iseememories-15_elgok5.png`,
+        alt: "The Smart Photo Book editor: an upload area for adding photos above a strip of page thumbnails.",
+        caption: "Upload: adding photos to a Smart Photo Book.",
+        width: 3360,
+        height: 1924,
+      },
+      {
+        src: `${CLD}/v1763906216/${FOLDER}/Iseememories/iseememories-17_eqpiqa.png`,
+        alt: "Book options screen listing cover type, size, paper finish and colour, beside hardcover and matte-laminate swatches.",
+        caption: "Choose cover: book options before checkout.",
+        width: 3360,
+        height: 1928,
+      },
+      {
+        src: `${CLD}/v1763906212/${FOLDER}/Iseememories/iseememories-16_iqkkv3.png`,
+        alt: "Page overview: every page of the book as a grid of thumbnails, with Place order and Edit buttons.",
+        caption: "Preview: reviewing every page before ordering.",
+        width: 3360,
+        height: 1926,
+      },
+    ],
     source: "merged",
     review:
       "Repo named Paystack in the stack (removed per brief). Repo title 'I See Memories'. Role: Full-Stack Engineer (Prisca's choice).",
@@ -182,6 +205,29 @@ export const projects: Project[] = [
       width: 3360,
       height: 1926,
     },
+    gallery: [
+      {
+        src: `${CLD}/v1763907165/${FOLDER}/Foodease/foodease-11_q0nd5m.png`,
+        alt: "FoodEase self-service onboarding: a Create Your Account form for restaurant details beside a green welcome panel.",
+        caption: "Self-service onboarding: creating a restaurant account.",
+        width: 3360,
+        height: 1924,
+      },
+      {
+        src: `${CLD}/v1763907167/${FOLDER}/Foodease/foodease-12_n4gnnh.png`,
+        alt: "Second onboarding step with fields for company email, contact number, login password and PIN, and a Register button.",
+        caption: "Onboarding: admin details and login setup.",
+        width: 3360,
+        height: 1924,
+      },
+      {
+        src: `${CLD}/v1763907159/${FOLDER}/Foodease/foodease-8_ucegyz.png`,
+        alt: "FoodEase landing page section with Inventory Management and Business Analytics cards, each showing a dashboard on a laptop.",
+        caption: "Landing page: inventory and analytics, two FoodEase Office areas.",
+        width: 3322,
+        height: 1926,
+      },
+    ],
     source: "merged",
     review:
       "Repo copy described order and kitchen processing; replaced with the FoodEase Office scope. Dates within Fusion Intelligence unknown.",
@@ -300,15 +346,38 @@ export const projects: Project[] = [
     urlLabel: "checkref.co",
     tone: 6,
     cover: {
-      src: `${CLD}/v1763904174/${FOLDER}/Checkref/checkref-1_z5kwjl.png`,
-      alt: "CheckRef marketing page: the headline “Automate pre-onboarding in minutes” beside a desktop monitor showing the dashboard.",
-      caption: "CheckRef's public landing page.",
+      src: `${CLD}/v1763904154/${FOLDER}/Checkref/checkref-recruiter-4_kasp8m.png`,
+      alt: "CheckRef company dashboard: completed and incomplete request counts, time and cost saved, and a table of the latest reference requests.",
+      caption: "The company dashboard, shown with test data.",
       width: 3360,
-      height: 1844,
+      height: 1858,
     },
+    gallery: [
+      {
+        src: `${CLD}/v1763904178/${FOLDER}/Checkref/checkref-admin-1_hoyagt.png`,
+        alt: "CheckRef platform-admin dashboard with summary cards and a requests chart.",
+        caption: "Platform administrator dashboard.",
+        width: 3360,
+        height: 1854,
+      },
+      {
+        src: `${CLD}/v1763904149/${FOLDER}/Checkref/checkref-recruiter-6_w5npiu.png`,
+        alt: "Question set screen where a company manages its reference-check question templates.",
+        caption: "Company view: managing reference question sets.",
+        width: 3360,
+        height: 1858,
+      },
+      {
+        src: `${CLD}/v1763904176/${FOLDER}/Checkref/checkref-signup_gpjmpk.png`,
+        alt: "CheckRef sign-up page with a registration form beside a preview of the dashboard.",
+        caption: "Sign-up for new companies.",
+        width: 3360,
+        height: 1944,
+      },
+    ],
     source: "merged",
     review:
-      "Repo said 'Lead Frontend Engineer' and 'built and maintained'; old CV said separate contract. Resolved: Fusion Intelligence, no maintenance. Cover shows the marketing page; confirm you built it, or pick an app screenshot instead.",
+      "Repo said 'Lead Frontend Engineer' and 'built and maintained'; old CV said separate contract. Resolved: Fusion Intelligence, no maintenance. Cover switched from the marketing page to the app dashboard (test data). Avoid checkref-recruiter-13: it shows a phone number.",
   },
 
   // ────────────────────────────── Additional ──────────────────────────────
