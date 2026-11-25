@@ -81,23 +81,14 @@ Every item from the audit inventory ([01-audit.md §10](docs/redesign/01-audit.m
 
 **Classification (as you specified):** Fusion Intelligence = FoodEase, NMDB, CheckRef, Surf n' Turf · Independent contracts = Ednaimo, ORIPA, Sedic, ISeeMemories · Freelance = Arinze Obidiegwu · Personal = Horde.
 
-## 4. Draft copy (rewrite in your voice)
+## 4. Draft copy
 
-Each of these shows a dashed **Draft** tag on the page, except where noted.
+All approved by you (Nov 2026), so the "Draft" tags are gone:
+- Field notes: "Now" row removed; Home ground, Growing into and Off-screen kept
+- How I build, What I enjoy, Currently exploring, Off-screen, experience one-liners, Home "In short", Writing intro and topics: kept as written
+- Explorations shelves: kept Backend experiments, Small engineering tools, Open-source contributions and Personal projects; removed Cybersecurity learning and Technical experiments
 
-| Page | Copy | File |
-|---|---|---|
-| About | Field notes (4 rows) | `data/about.ts` → `fieldNotes` |
-| About | "How I build" (4 principles, folding in Product Delivery and Soft Skills). You were sceptical; read this closely. | `data/about.ts` → `principles` |
-| About | "What I enjoy working on", "Currently exploring" | `data/about.ts` |
-| About | Off-screen: Fashion, Creative projects, Learning | `data/about.ts` → `offScreen` |
-| About | Experience one-liners (Fusion Intelligence, Pake Group, Bellviv), condensed from the CV | `data/experience.ts` (no tag) |
-| Home | "In short" four columns | `app/page.tsx` → `inShort` (no tag) |
-| Explorations | Six shelf blurbs | `data/lab.ts` → `labAreas` (no tag) |
-| Writing | Intro lead ("things I've figured out and want to remember…") | `app/writing/page.tsx` (no tag) |
-| Writing | Topic for each dev.to post (React Hooks → Development notes; Open source → Lessons) | `data/writing.ts` |
-| ISeeMemories | Overview and brief headings and bodies (technical notes are verified facts only) | `data/projects.ts` (no tag) |
-| All projects | Subtitles, intros, image alt text and captions | `data/projects.ts` (no tag) |
+Still in my words (no tag), so tell me if anything reads wrong: project subtitles, intros, the ISeeMemories overview and brief, image alt text and captions.
 
 ## 5. Images
 

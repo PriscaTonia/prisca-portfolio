@@ -69,6 +69,8 @@ export function ProjectMedia({
   }
 
   const [w, h] = ratio.split("/").map((n) => n.trim());
+  // Fill the mat along whichever side the screenshot reaches first.
+  const wider = hasSize && image.width! / image.height! >= Number(w) / Number(h);
   return (
     <div
       className={cn(
@@ -88,7 +90,8 @@ export function ProjectMedia({
             sizes={sizes}
             priority={priority}
             className={cn(
-              "h-auto max-h-full w-auto max-w-full rounded-[8px] border border-black/5 shadow-[0_18px_40px_-24px_var(--shadow)]",
+              wider ? "h-auto w-full" : "h-full w-auto",
+              "rounded-[8px] border border-black/5 shadow-[0_18px_40px_-24px_var(--shadow)]",
               zoomCls
             )}
           />

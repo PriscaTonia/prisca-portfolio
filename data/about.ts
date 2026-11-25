@@ -1,6 +1,6 @@
 /**
- * About page copy. `draft: true` items are layout copy for Prisca to rewrite
- * (listed in CONTENT_REVIEW.md §4) and show a dashed "Draft" tag in the UI.
+ * About page copy. Set `draft: true` on a block to show a dashed "Draft" tag
+ * while its wording is still being reviewed. All blocks approved Nov 2026.
  */
 
 export const aboutParagraphs = [
@@ -18,9 +18,8 @@ export const portrait = {
 };
 
 export const fieldNotes = {
-  draft: true,
+  draft: false,
   rows: [
-    { label: "Now", value: "Frontend Engineer at Fusion Intelligence" },
     { label: "Home ground", value: "React · Next.js · TypeScript" },
     { label: "Growing into", value: "Backend with Node.js and Express" },
     { label: "Off-screen", value: "Fashion and creative projects" },
@@ -29,7 +28,7 @@ export const fieldNotes = {
 
 /** Folds in the old "Product Delivery" and "Soft Skills" lists. */
 export const principles = {
-  draft: true,
+  draft: false,
   items: [
     {
       title: "Understand the product first",
@@ -51,17 +50,17 @@ export const principles = {
 };
 
 export const enjoy = {
-  draft: true,
+  draft: false,
   body: "Products with real users and real workflows: platforms, dashboards and customer journeys where the interface has to make complicated things manageable. I especially like taking something from research and a blank repository to a working product.",
 };
 
 export const exploring = {
-  draft: true,
+  draft: false,
   body: "Backend development with Node.js and Express, the systems behind the interfaces I build, plus small experiments and tools along the way.",
 };
 
 export const offScreen = {
-  draft: true,
+  draft: false,
   items: [
     {
       title: "Fashion",

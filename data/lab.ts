@@ -1,16 +1,11 @@
 import type { LabEntry } from "./types";
 
-/** Lab shelves (brief §7.5). Blurbs are draft copy — see CONTENT_REVIEW.md. */
+/** Lab shelves (brief §7.5). Four shelves approved by Prisca (Nov 2026). */
 export const labAreas = [
   {
     key: "backend",
     title: "Backend experiments",
     blurb: "APIs, data models and the systems behind the interfaces I build.",
-  },
-  {
-    key: "security",
-    title: "Cybersecurity learning",
-    blurb: "Notes and exercises from learning how things break, and how to keep them from breaking.",
   },
   {
     key: "tools",
@@ -21,11 +16,6 @@ export const labAreas = [
     key: "oss",
     title: "Open-source contributions",
     blurb: "Pull requests and fixes to projects I use or learn from.",
-  },
-  {
-    key: "experiments",
-    title: "Technical experiments",
-    blurb: "Trying an idea quickly to see how it behaves.",
   },
   {
     key: "personal",

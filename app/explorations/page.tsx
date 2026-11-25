@@ -61,7 +61,7 @@ export default function ExplorationsPage() {
         </div>
 
         {/* Shelves */}
-        <ul className="mt-12 grid gap-5 tab:grid-cols-2 desk:grid-cols-3">
+        <ul className="mt-12 grid gap-5 tab:grid-cols-2">
           {labAreas.map((area, i) => {
             const entries = labEntries.filter((e) => e.area === area.key && e.status !== "placeholder");
             return (
@@ -111,7 +111,7 @@ export default function ExplorationsPage() {
               </li>
             );
           })}
-          <li className="flex min-h-[220px] flex-col items-start justify-center rounded-[20px] border border-dashed border-line-2 bg-bg/60 p-6">
+          <li className="flex min-h-[140px] flex-col items-start justify-center rounded-[20px] border border-dashed border-line-2 bg-bg/60 p-6 tab:col-span-2">
             <p className="serif text-[30px] leading-tight text-muted">+ Whatever comes next.</p>
           </li>
         </ul>
