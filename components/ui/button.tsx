@@ -5,9 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 /**
- * Pill button (brief §4.4). `primary` / `secondary` are the design-system
- * variants. `default`, `outline` and `ghost` remain only so the legacy pages
- * keep compiling until Phase 5 replaces them.
+ * Pill button (brief §4.4): `primary` (--btn) and `secondary` (outlined).
  */
 const buttonVariants = cva(
   [
@@ -21,10 +19,6 @@ const buttonVariants = cva(
       variant: {
         primary: "bg-btn text-btn-ink hover:bg-ink dark:hover:bg-link",
         secondary: "border border-line-2 bg-transparent text-ink hover:bg-soft",
-        // legacy
-        default: "bg-btn text-btn-ink hover:bg-ink dark:hover:bg-link",
-        outline: "border border-line-2 bg-transparent text-ink hover:bg-soft",
-        ghost: "text-ink hover:bg-soft",
       },
       size: {
         default: "min-h-12 px-6 text-[15px]",

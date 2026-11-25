@@ -34,27 +34,6 @@
   --header-h: 72px;
   --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
 
-  /* Legacy shadcn aliases — keep the old pages coherent until Phase 5
-     replaces them. Remove together with components/ui/{card,badge,…}. */
-  --background: var(--bg);
-  --foreground: var(--ink);
-  --card: var(--bg-2);
-  --card-foreground: var(--ink);
-  --popover: var(--bg-2);
-  --popover-foreground: var(--ink);
-  --primary: var(--link);
-  --primary-foreground: var(--bg);
-  --secondary: var(--soft);
-  --secondary-foreground: var(--ink);
-  --muted-foreground: var(--muted);
-  --accent-foreground: var(--ink);
-  --destructive: #b42318;
-  --border: var(--line);
-  --input: var(--line-2);
-  --ring: var(--accent);
-  --surface-rose: var(--soft);
-  --surface-sage: var(--bg-2);
-  --radius: 0.75rem;
 }
 
 .dark {
@@ -82,7 +61,6 @@
   --tone-5: #3f333e;
   --tone-6: #323a43;
   --shadow: rgba(0, 0, 0, 0.6);
-  --destructive: #f97066;
 }
 
 @theme inline {
@@ -110,34 +88,10 @@
   --color-tone-5: var(--tone-5);
   --color-tone-6: var(--tone-6);
 
-  /* legacy aliases (see :root) */
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
 
   --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-instrument-serif), ui-serif, Georgia, serif;
   --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, monospace;
-  /* legacy font utilities used by old components */
-  --font-grotesk: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-inter: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
 
   --ease-brand: var(--ease);
 }
@@ -210,13 +164,6 @@
     border-radius: 4px;
   }
 
-  /* Legacy container used by old pages */
-  .site-container {
-    margin-inline: auto;
-    width: 100%;
-    max-width: 1280px;
-    padding-inline: clamp(20px, 5vw, 64px);
-  }
 }
 
 /* ------------------------------------------------------------------ *
