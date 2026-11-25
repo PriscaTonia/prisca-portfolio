@@ -90,10 +90,11 @@ export const roles: Role[] = [
   {
     org: "Arinze Obidiegwu",
     role: "Frontend Engineer",
-    dates: "2025",
+    dates: "Jul – Aug 2025",
     kind: "freelance",
     projectSlugs: ["caephas-portfolio"],
-    // Year only: no start/end, so it's listed under the timeline, not drawn as a bar.
+    start: "2025-07",
+    end: "2025-08",
     source: "existing",
   },
 ];

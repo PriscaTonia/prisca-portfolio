@@ -152,3 +152,5 @@ Verified facts given directly by Prisca (25 Nov 2026). These rank alongside the 
 - **Links:** Surf n' Turf live link is https://foodease-surf-n-turf.cap.reachcinema.io. CheckRef live link removed.
 - **Ednaimo:** the landing page was part of the redesign (cover confirmed).
 - **Privacy:** ISeeMemories 11/20/21 and CheckRef recruiter-13 were replaced in Cloudinary with blurred versions (phone, street, zipcode), with Prisca's approval.
+
+- **Arinze Obidiegwu portfolio:** freelance, **Jul – Aug 2025** (supersedes "2025").

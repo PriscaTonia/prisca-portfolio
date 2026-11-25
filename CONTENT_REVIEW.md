@@ -74,7 +74,7 @@ Every item from the audit inventory ([01-audit.md §10](docs/redesign/01-audit.m
 | FoodEase | dates | ✅ Jun 2023 – Present (ongoing) |
 | CheckRef | dates | ✅ Duration only: "About 8 months" (no exact dates, on purpose) |
 | Surf n' Turf | dates | ✅ Nov – Dec 2025 |
-| Arinze Obidiegwu portfolio | engagement, dates | ✅ Freelance, 2025 (listed under the timeline because the month is unknown) |
+| Arinze Obidiegwu portfolio | engagement, dates | ✅ Freelance, Jul – Aug 2025 (drawn on the timeline) |
 | Horde Budgeting App | link | ✅ No public link. Shown as personal · in progress · Jun 2024 – Present |
 | About → Journey | origin story ("Before 2022") | ⏳ Placeholder kept on purpose until you write it |
 | ISeeMemories | storage and preview implementation | ✅ Deliberately not described (not confirmed) |

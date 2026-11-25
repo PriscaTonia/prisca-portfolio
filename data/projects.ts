@@ -961,7 +961,7 @@ export const projects: Project[] = [
     caseStudy: "summary",
     role: "Frontend Engineer",
     engagement: "Freelance",
-    dates: "2025",
+    dates: "Jul – Aug 2025",
     summary:
       "A responsive portfolio website presenting Arinze Obidiegwu's work, experience and contact details.",
     intro:
@@ -1063,6 +1063,6 @@ export const projects: Project[] = [
     ],
     source: "merged",
     review:
-      "The brief's 'Portfolio websites (clients)' entry. Arinze's is the only client portfolio. Slug kept for URL continuity. Freelance, 2025 (Prisca).",
+      "The brief's 'Portfolio websites (clients)' entry. Arinze's is the only client portfolio. Slug kept for URL continuity. Freelance, Jul – Aug 2025 (Prisca).",
   },
 ];

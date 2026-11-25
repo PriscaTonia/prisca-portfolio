@@ -45,7 +45,7 @@ export function Timeline({ roles, now = new Date() }: { roles: Role[]; now?: Dat
             <span aria-hidden className="h-2 w-6 rounded-full bg-ink/40" /> Part-time
           </li>
           <li className="flex items-center gap-2">
-            <span aria-hidden className="h-2 w-6 rounded-full bg-accent" /> Contract
+            <span aria-hidden className="h-2 w-6 rounded-full bg-accent" /> Contract / freelance
           </li>
           {undated.length ? (
             <li className="flex items-center gap-2">
