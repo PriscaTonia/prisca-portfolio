@@ -73,7 +73,7 @@ export function FeaturedProjectsSection({
                       className="gap-2 text-muted-foreground hover:text-foreground"
                       asChild
                     >
-                      <Link href={`/projects/${project.slug}`}>
+                      <Link href={`/work/${project.slug}`}>
                         View Project
                         <ExternalLink className="size-3.5" />
                       </Link>
