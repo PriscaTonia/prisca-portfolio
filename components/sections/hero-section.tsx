@@ -94,7 +94,7 @@ export function HeroSection() {
           </Button>
           <Button size="lg" variant="outline" className="gap-2" asChild>
             <a
-              href="/Prisca-Resume.pdf"
+              href="/Prisca_Onwudebelu_Frontend_Engineer.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >

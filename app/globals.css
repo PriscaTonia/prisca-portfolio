@@ -1,141 +1,372 @@
 @import "tailwindcss";
-@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
+/* ------------------------------------------------------------------ *
+ * Design tokens (brief §4.1). Components reference these, never hex. *
+ * ------------------------------------------------------------------ */
+:root {
+  --bg: #faf9f7;
+  --bg-2: #ffffff;
+  --soft: #f4e8ea;
+  --accent: #c94d78; /* large text / decorative only */
+  --link: #b23f69; /* links + small accent text (AA) */
+  --ink: #252329;
+  --muted: #6a6469;
+  --line: #e8e4df;
+  --line-2: #d9d3cd;
+  --btn: #252329;
+  --btn-ink: #ffffff;
+  --panel: #252329;
+  --panel-ink: #faf9f7;
+  --panel-muted: #cfc8cc;
+  --panel-accent: #e58ba9;
+  --ph: #f3f0ec;
+  --ph-line: #e5e0da;
+  --tone-1: #ebd3d9;
+  --tone-2: #e3d9cb;
+  --tone-3: #d6ded6;
+  --tone-4: #ede4d8;
+  --tone-5: #d9ccd5;
+  --tone-6: #d2d9e0;
+  --shadow: rgba(37, 35, 41, 0.28);
+
+  --header-h: 72px;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  /* Legacy shadcn aliases — keep the old pages coherent until Phase 5
+     replaces them. Remove together with components/ui/{card,badge,…}. */
+  --background: var(--bg);
+  --foreground: var(--ink);
+  --card: var(--bg-2);
+  --card-foreground: var(--ink);
+  --popover: var(--bg-2);
+  --popover-foreground: var(--ink);
+  --primary: var(--link);
+  --primary-foreground: var(--bg);
+  --secondary: var(--soft);
+  --secondary-foreground: var(--ink);
+  --muted-foreground: var(--muted);
+  --accent-foreground: var(--ink);
+  --destructive: #b42318;
+  --border: var(--line);
+  --input: var(--line-2);
+  --ring: var(--accent);
+  --surface-rose: var(--soft);
+  --surface-sage: var(--bg-2);
+  --radius: 0.75rem;
+}
+
+.dark {
+  --bg: #171619;
+  --bg-2: #211f23;
+  --soft: #34272d;
+  --accent: #d9789a;
+  --link: #e58ba9;
+  --ink: #f7f4f5;
+  --muted: #b8afb4;
+  --line: #39343a;
+  --line-2: #4a444b;
+  --btn: #d9789a;
+  --btn-ink: #171619;
+  --panel: #29262b;
+  --panel-ink: #f7f4f5;
+  --panel-muted: #b8afb4;
+  --panel-accent: #e58ba9;
+  --ph: #221f24;
+  --ph-line: #3a353c;
+  --tone-1: #4a333b;
+  --tone-2: #433b31;
+  --tone-3: #353e38;
+  --tone-4: #433a30;
+  --tone-5: #3f333e;
+  --tone-6: #323a43;
+  --shadow: rgba(0, 0, 0, 0.6);
+  --destructive: #f97066;
+}
+
 @theme inline {
+  --color-bg: var(--bg);
+  --color-bg-2: var(--bg-2);
+  --color-soft: var(--soft);
+  --color-accent: var(--accent);
+  --color-link: var(--link);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-line-2: var(--line-2);
+  --color-btn: var(--btn);
+  --color-btn-ink: var(--btn-ink);
+  --color-panel: var(--panel);
+  --color-panel-ink: var(--panel-ink);
+  --color-panel-muted: var(--panel-muted);
+  --color-panel-accent: var(--panel-accent);
+  --color-ph: var(--ph);
+  --color-ph-line: var(--ph-line);
+  --color-tone-1: var(--tone-1);
+  --color-tone-2: var(--tone-2);
+  --color-tone-3: var(--tone-3);
+  --color-tone-4: var(--tone-4);
+  --color-tone-5: var(--tone-5);
+  --color-tone-6: var(--tone-6);
+
+  /* legacy aliases (see :root) */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-
-  --font-grotesk: var(--font-grotesk);
-  --font-inter: var(--font-inter);
-
-  --color-ring: var(--ring);
-  --color-input: var(--input);
-  --color-border: var(--border);
-  --color-destructive: var(--destructive);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-accent: var(--accent);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-muted: var(--muted);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-secondary: var(--secondary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-primary: var(--primary);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-popover: var(--popover);
-  --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-instrument-serif), ui-serif, Georgia, serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, monospace;
+  /* legacy font utilities used by old components */
+  --font-grotesk: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-inter: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+
+  --ease-brand: var(--ease);
 }
 
-:root {
-  --radius: 0.5rem;
-
-  /* Light Mode - Muted Rose & Sage Theme */
-  --background: oklch(1 0 0); /* Pure white */
-  --foreground: oklch(0.2 0 0); /* Almost black */
-
-  --card: oklch(0.98 0 0); /* Subtle gray for cards */
-  --card-foreground: oklch(0.2 0 0);
-
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.2 0 0);
-
-  --primary: oklch(0.65 0.12 15); /* Muted Rose - sophisticated dusty rose */
-  --primary-foreground: oklch(1 0 0);
-
-  --secondary: oklch(0.9 0.05 15); /* Blush - barely-there pink */
-  --secondary-foreground: oklch(0.2 0 0);
-
-  --muted: oklch(0.96 0 0);
-  --muted-foreground: oklch(0.5 0 0);
-
-  --accent: oklch(0.7 0.08 150); /* Sage Green - calming, elegant */
-  --accent-foreground: oklch(0.15 0 0); /* Dark text on sage */
-
-  --destructive: oklch(0.577 0.245 27.325);
-
-  --border: oklch(0.9 0 0);
-  --input: oklch(0.9 0 0);
-  --ring: oklch(0.65 0.12 15); /* Muted rose ring */
-  --surface-rose: oklch(0.96 0.02 20);
-  --surface-sage: oklch(0.95 0.02 150);
+@theme {
+  /* Brief §9 breakpoints: 620 (tab), 960 (desk), 1020 (nav) */
+  --breakpoint-tab: 38.75rem;
+  --breakpoint-desk: 60rem;
+  --breakpoint-nav: 63.75rem;
 }
 
-.dark {
-  /* Dark Mode - Muted Rose & Sage Theme */
-  --background: oklch(0.14 0.01 260); /* Midnight plum */
-  --foreground: oklch(1 0 0); /* White */
-
-  --card: oklch(0.2 0.01 260); /* Deep slate */
-  --card-foreground: oklch(1 0 0);
-
-  --popover: oklch(0.18 0.01 260);
-  --popover-foreground: oklch(1 0 0);
-
-  --primary: oklch(0.7 0.1 15); /* Warm Rose - softer in dark mode */
-  --primary-foreground: oklch(1 0 0);
-
-  --secondary: oklch(0.45 0.05 25); /* Glowing blush */
-  --secondary-foreground: oklch(1 0 0);
-
-  --muted: oklch(0.26 0.01 260);
-  --muted-foreground: oklch(0.85 0.01 260);
-
-  --accent: oklch(0.7 0.08 150); /* Soft Sage - brighter in dark */
-  --accent-foreground: oklch(1 0 0);
-
-  --destructive: oklch(0.704 0.191 22.216);
-
-  --border: oklch(0.32 0.01 260);
-  --input: oklch(0.32 0.01 260);
-  --ring: oklch(0.7 0.1 15); /* Warm rose ring */
-  --surface-rose: oklch(0.35 0.05 20);
-  --surface-sage: oklch(0.4 0.04 150);
-}
-
+/* ------------------------------------------------------------------ *
+ * Base                                                                *
+ * ------------------------------------------------------------------ */
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--header-h) + 16px);
+    -webkit-text-size-adjust: 100%;
   }
 
-  * {
-    @apply border-border outline-ring/50;
-  }
   body {
-    @apply bg-background text-foreground font-inter antialiased;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-size: 17px;
+    line-height: 1.6;
+    font-optical-sizing: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip;
   }
 
-  .dark body {
-    background-color: var(--background);
-    background-image: radial-gradient(
-        circle at 15% 20%,
-        var(--surface-rose) 0%,
-        transparent 55%
-      ),
-      radial-gradient(circle at 85% 0%, var(--surface-sage) 0%, transparent 50%),
-      linear-gradient(180deg, rgba(7, 8, 12, 0.9), rgba(7, 8, 12, 1));
-    background-attachment: fixed;
+  /* Smooth theme change (0.4s). Utilities with their own `transition`
+     override this because @layer base has the lowest priority. */
+  *,
+  *::before,
+  *::after {
+    border-color: var(--line);
+    transition-property: background-color, border-color, color, fill;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
   }
 
-  button {
-    @apply cursor-pointer!;
+  ::selection {
+    background: var(--soft);
+    color: var(--ink);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
   }
 
   h1,
   h2,
   h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-grotesk;
+  h4 {
+    font-weight: 500;
+    text-wrap: balance;
   }
 
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Legacy container used by old pages */
   .site-container {
-    @apply mx-auto w-full max-w-360 px-4 sm:px-6 lg:px-12;
+    margin-inline: auto;
+    width: 100%;
+    max-width: 1280px;
+    padding-inline: clamp(20px, 5vw, 64px);
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Typography + layout primitives (brief §4.2)                         *
+ * ------------------------------------------------------------------ */
+@layer components {
+  .container-x {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 1280px;
+    padding-inline: clamp(20px, 5vw, 64px);
+  }
+
+  .section-y {
+    padding-block: clamp(64px, 8vw, 120px);
+  }
+
+  .t-hero {
+    font-size: clamp(58px, 10vw, 156px);
+    font-weight: 500;
+    line-height: 0.92;
+    letter-spacing: -0.055em;
+  }
+  .t-display {
+    font-size: clamp(54px, 9.4vw, 148px);
+    font-weight: 500;
+    line-height: 0.92;
+    letter-spacing: -0.055em;
+  }
+  .t-display-2 {
+    font-size: clamp(40px, 6.4vw, 92px);
+    font-weight: 500;
+    line-height: 0.98;
+    letter-spacing: -0.048em;
+  }
+  .t-h2 {
+    font-size: clamp(30px, 4vw, 54px);
+    font-weight: 500;
+    line-height: 1.06;
+    letter-spacing: -0.035em;
+  }
+  .t-h3 {
+    font-size: clamp(26px, 3vw, 40px);
+    font-weight: 500;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+  }
+  .t-lead {
+    font-size: clamp(19px, 1.9vw, 24px);
+    font-weight: 400;
+    line-height: 1.45;
+    letter-spacing: -0.012em;
+  }
+  .t-body {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  /* Selective editorial accent — one word / short phrase per heading */
+  .serif {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  .label {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+  }
+
+  .mono-meta {
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: var(--muted);
+  }
+
+  .measure {
+    max-width: 68ch;
+  }
+
+  /* Hairline underline that grows on hover (the one allowed gradient). */
+  .u-grow {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 0% 1px;
+    transition: background-size 0.45s var(--ease), color 0.25s ease;
+  }
+  .u-grow:hover,
+  .group:hover .u-grow-group {
+    background-size: 100% 1px;
+  }
+  .u-grow-group {
+    background-image: linear-gradient(var(--accent), var(--accent));
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 0% 2px;
+    transition: background-size 0.6s var(--ease);
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .dot-grid {
+    background-image: radial-gradient(var(--line) 1.2px, transparent 1.2px);
+    background-size: 24px 24px;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Motion (brief §4.5)                                                 *
+ * ------------------------------------------------------------------ */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fade-up {
+  animation: fade-up 0.6s var(--ease) both;
+  animation-delay: var(--delay, 0s);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0s !important;
+    transition-duration: 0.001ms !important;
+    transition-delay: 0s !important;
+    scroll-behavior: auto !important;
   }
 }

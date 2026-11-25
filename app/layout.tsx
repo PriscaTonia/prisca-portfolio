@@ -1,68 +1,69 @@
-import type { Metadata } from "next";
-import { Space_Grotesk, Inter } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { DM_Sans, Instrument_Serif, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
-import { SiteNavbar } from "@/components/common/site-navbar";
+import { SiteHeader } from "@/components/layout/site-header";
+import { SiteFooter } from "@/components/layout/site-footer";
+import { site } from "@/data/site";
 
-const spaceGrotesk = Space_Grotesk({
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  variable: "--font-grotesk",
+  axes: ["opsz"],
+  variable: "--font-dm-sans",
+  display: "swap",
 });
 
-const inter = Inter({
+const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: "400",
+  style: ["italic", "normal"],
+  variable: "--font-instrument-serif",
+  display: "swap",
 });
 
-const website_url = "https://www.prisca.dev";
-const og_image_url =
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-jetbrains-mono",
+  display: "swap",
+});
+
+const defaultTitle = `${site.name} — ${site.jobTitle}`;
+const ogImage =
   "https://res.cloudinary.com/prisca/image/upload/v1763980377/Other%20Images/opengraph-image_jqge8m.jpg";
 
 export const metadata: Metadata = {
-  title: {
-    default: "Prisca Onwudebelu | Frontend Engineer",
-    template: "%s | Prisca Onwudebelu ",
-  },
-  description:
-    "Frontend Engineer specializing in React, Next.js, and TypeScript. Focused on rich product storytelling, high-performing interfaces, and systems that scale gracefully across teams and devices.",
+  metadataBase: new URL(site.url),
+  title: { default: defaultTitle, template: `%s — ${site.name}` },
+  description: site.description,
   keywords: [
-    "Frontend Developer",
-    "Frontend Engineer",
-    "Software Developer",
     "Software Engineer",
+    "Frontend Engineer",
+    "Frontend Developer",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Prisca Onwudebelu",
   ],
-  authors: [{ name: "Prisca Onwudebelu" }],
-  creator: "Prisca Onwudebelu",
-  publisher: "Prisca Onwudebelu ",
-  metadataBase: new URL(website_url), // change to your actual domain
-  alternates: {
-    canonical: website_url,
-  },
+  authors: [{ name: site.name, url: site.url }],
+  creator: site.name,
+  publisher: site.name,
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
-    locale: "en_US",
-    url: website_url,
-    title: "Prisca Onwudebelu | Frontend Engineer",
-    description:
-      "Frontend Engineer specializing in React, Next.js, and TypeScript. Focused on rich product storytelling, high-performing interfaces, and systems that scale gracefully across teams and devices.",
-    siteName: "Prisca Onwudebelu | Frontend Engineer",
-    images: [
-      {
-        url: og_image_url,
-        width: 1200,
-        height: 630,
-        alt: "Prisca Onwudebelu | Frontend Engineer",
-        type: "image/jpeg",
-      },
-    ],
+    locale: "en_GB",
+    url: site.url,
+    siteName: site.name,
+    title: defaultTitle,
+    description: site.description,
+    images: [{ url: ogImage, width: 1200, height: 630, alt: `${site.name}, ${site.jobTitle}` }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Prisca Onwudebelu | Frontend Engineer",
-    description:
-      "Frontend Engineer specializing in React, Next.js, and TypeScript. Focused on rich product storytelling, high-performing interfaces, and systems that scale gracefully across teams and devices.",
-    creator: "@EbubePrisca", // replace with your handle if available
-    images: [og_image_url],
+    title: defaultTitle,
+    description: site.description,
+    creator: site.twitter,
+    images: [ogImage],
   },
   icons: {
     icon: "/favicon.ico",
@@ -71,33 +72,33 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#FAF9F7" },
+    { media: "(prefers-color-scheme: dark)", color: "#171619" },
+  ],
+};
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${spaceGrotesk.variable} ${inter.variable} font-body antialiased`}
-        style={
-          {
-            "--font-grotesk": spaceGrotesk.style.fontFamily,
-            "--font-inter": inter.style.fontFamily,
-          } as React.CSSProperties
-        }
-        suppressHydrationWarning
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <div className="flex min-h-screen flex-col">
-            <SiteNavbar />
-            <div className="flex-1">{children}</div>
-          </div>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${dmSans.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable}`}
+    >
+      <body className="flex min-h-dvh flex-col">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <a
+            href="#main"
+            className="fixed left-4 top-3 z-[60] -translate-y-[200%] rounded-full bg-btn px-5 py-3 text-[15px] font-medium text-btn-ink focus:translate-y-0"
+          >
+            Skip to content
+          </a>
+          <SiteHeader />
+          <main id="main" tabIndex={-1} className="flex-1 outline-none">
+            {children}
+          </main>
+          <SiteFooter />
         </ThemeProvider>
       </body>
     </html>

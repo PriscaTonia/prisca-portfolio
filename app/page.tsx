@@ -10,7 +10,7 @@ export default async function Home() {
   const projects = await getAllProjectsWithImages();
 
   return (
-    <main className="bg-background">
+    <div className="bg-background">
       <div className="site-container space-y-24 py-12">
         <HeroSection />
         <FeaturedProjectsSection projects={projects} />
@@ -19,6 +19,6 @@ export default async function Home() {
         <CertificationsSection />
         <ContactSection />
       </div>
-    </main>
+    </div>
   );
 }
