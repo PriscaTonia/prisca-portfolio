@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
-import type { PortfolioProject } from "@/data/projects";
+import type { PortfolioProject } from "@/data/legacy-projects";
 
 const badgeColors = [
   "bg-primary/15 text-primary border-primary/20",

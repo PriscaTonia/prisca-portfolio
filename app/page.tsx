@@ -4,7 +4,7 @@ import { TechnicalSkillsSection } from "@/components/sections/technical-skills";
 import { EducationSection } from "@/components/sections/education-section";
 import { CertificationsSection } from "@/components/sections/certifications-section";
 import { ContactSection } from "@/components/sections/contact-section";
-import { getAllProjectsWithImages } from "@/lib/cloudinary";
+import { getAllProjectsWithImages } from "@/lib/legacy-cloudinary";
 
 export default async function Home() {
   const projects = await getAllProjectsWithImages();

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getProjectWithImages } from "@/lib/cloudinary";
+import { getProjectWithImages } from "@/lib/legacy-cloudinary";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ProjectCarousel } from "@/components/projects/project-carousel";
