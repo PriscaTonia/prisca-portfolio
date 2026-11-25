@@ -99,6 +99,7 @@ export function ProjectTile({ project, variant, index, priority, headingLevel = 
           <ProjectMedia
             image={project.cover}
             ratio="16/8"
+            fit="natural"
             label={label}
             tone={project.tone}
             priority={priority}
@@ -170,7 +171,7 @@ export function ProjectTile({ project, variant, index, priority, headingLevel = 
       <article className="group relative">
         <ProjectMedia
           image={project.cover}
-          ratio="5/4"
+          ratio="4/3"
           label={label}
           tone={project.tone}
           sizes="(min-width: 1280px) 580px, (min-width: 960px) 46vw, 92vw"

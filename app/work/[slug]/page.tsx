@@ -207,6 +207,7 @@ export default async function ProjectPage({ params }: Params) {
           <ProjectMedia
             image={p.cover}
             ratio="16/8"
+            fit="natural"
             label={`${p.title} cover`}
             tone={p.tone}
             priority

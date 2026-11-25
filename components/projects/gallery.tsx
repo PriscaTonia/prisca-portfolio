@@ -36,7 +36,7 @@ function Tile({
         aria-label={`Open image ${i + 1} of ${total} in the gallery: ${img.alt}`}
         className="group block w-full cursor-zoom-in rounded-[18px] text-left"
       >
-        <ProjectMedia image={img} ratio={ratioOf(img, fallback)} label={img.alt} sizes={sizes} />
+        <ProjectMedia image={img} ratio={ratioOf(img, fallback)} fit="natural" label={img.alt} sizes={sizes} />
       </button>
       {img.caption ? <figcaption className="mono-meta mt-3">{img.caption}</figcaption> : null}
     </figure>

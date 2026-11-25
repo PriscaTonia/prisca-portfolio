@@ -6,7 +6,7 @@ import { Container } from "@/components/layout/section";
 import { Button, Arrow } from "@/components/ui/button";
 import { Chip } from "@/components/ui/tag";
 import { FeaturedLayout } from "@/components/projects/featured-layout";
-import { HeroFigure } from "@/components/home/hero-figure";
+import { HeroVisual } from "@/components/home/hero-visual";
 import { JsonLd } from "@/components/seo/json-ld";
 import { LegacyHashRedirect } from "@/components/legacy-hash-redirect";
 import { cn } from "@/lib/utils";
@@ -76,9 +76,7 @@ export default function HomePage() {
               {site.availability}
             </p>
           </div>
-          <div className="fade-up" style={{ ["--delay" as string]: "0.15s" }}>
-            <HeroFigure />
-          </div>
+          <HeroVisual className="hidden max-w-[440px] tab:block desk:max-w-[560px]" />
         </Container>
       </section>
 
