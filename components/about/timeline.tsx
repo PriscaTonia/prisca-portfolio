@@ -34,29 +34,29 @@ export function Timeline({ roles, now = new Date() }: { roles: Role[]; now?: Dat
 
   return (
     <div>
-      {/* Legend */}
-      <ul className="flex flex-wrap gap-x-6 gap-y-2 text-[14px] text-muted">
-        <li className="flex items-center gap-2">
-          <span aria-hidden className="h-2 w-6 rounded-full bg-ink" /> Employment
-        </li>
-        <li className="flex items-center gap-2">
-          <span aria-hidden className="h-2 w-6 rounded-full bg-ink/40" /> Part-time
-        </li>
-        <li className="flex items-center gap-2">
-          <span aria-hidden className="h-2 w-6 rounded-full bg-accent" /> Contract
-        </li>
-        {undated.length ? (
+      {/* Sticky key: stays under the header while the bars scroll, and
+          releases when the timeline ends (sticky is scoped to this wrapper). */}
+      <div className="sticky top-[var(--header-h)] z-10 -mx-[clamp(20px,5vw,64px)] border-b border-line bg-soft px-[clamp(20px,5vw,64px)] pb-3 pt-4">
+        <ul className="flex flex-wrap gap-x-6 gap-y-2 text-[14px] text-muted">
           <li className="flex items-center gap-2">
-            <span aria-hidden className="h-2 w-6 rounded-full border border-dashed border-accent" />
-            Not drawn (month unknown):{" "}
-            {undated.map((u) => `${u.org} (${u.kind === "freelance" ? "freelance" : "contract"}${u.dates ? `, ${u.dates}` : ""})`).join("; ")}
+            <span aria-hidden className="h-2 w-6 rounded-full bg-ink" /> Employment
           </li>
-        ) : null}
-      </ul>
-
-      <div className="mt-8">
+          <li className="flex items-center gap-2">
+            <span aria-hidden className="h-2 w-6 rounded-full bg-ink/40" /> Part-time
+          </li>
+          <li className="flex items-center gap-2">
+            <span aria-hidden className="h-2 w-6 rounded-full bg-accent" /> Contract
+          </li>
+          {undated.length ? (
+            <li className="flex items-center gap-2">
+              <span aria-hidden className="h-2 w-6 rounded-full border border-dashed border-accent" />
+              Not drawn (month unknown):{" "}
+              {undated.map((u) => `${u.org} (${u.kind === "freelance" ? "freelance" : "contract"}${u.dates ? `, ${u.dates}` : ""})`).join("; ")}
+            </li>
+          ) : null}
+        </ul>
         {/* Year ticks (desktop) */}
-        <div aria-hidden className="hidden desk:grid desk:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] desk:gap-8">
+        <div aria-hidden className="mt-4 hidden desk:grid desk:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] desk:gap-8">
           <span />
           <div className="relative h-6">
             {years.map((y) => (
@@ -70,7 +70,9 @@ export function Timeline({ roles, now = new Date() }: { roles: Role[]; now?: Dat
             ))}
           </div>
         </div>
+      </div>
 
+      <div>
         <ol className="divide-y divide-line border-y border-line">
           {dated.map((r) => {
             const { left, width } = pos(r);
