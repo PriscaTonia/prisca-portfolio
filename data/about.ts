@@ -96,7 +96,6 @@ export const capabilities: {
   {
     area: "Backend & APIs",
     items: "Node.js, Express, REST API integration",
-    tag: { text: "Practical · growing", variant: "dashed" },
   },
   { area: "Testing", items: "Cypress, Jest, Playwright" },
   { area: "Tools", items: "Git, GitHub, JIRA, Vercel, Netlify, WordPress", tone: "muted" },

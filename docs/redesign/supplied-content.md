@@ -154,3 +154,5 @@ Verified facts given directly by Prisca (25 Nov 2026). These rank alongside the 
 - **Privacy:** ISeeMemories 11/20/21 and CheckRef recruiter-13 were replaced in Cloudinary with blurred versions (phone, street, zipcode), with Prisca's approval.
 
 - **Arinze Obidiegwu portfolio:** freelance, **Jul – Aug 2025** (supersedes "2025").
+
+- **Capabilities:** removed the "Practical · growing" tag from Backend & APIs (Prisca, Nov 2026).
