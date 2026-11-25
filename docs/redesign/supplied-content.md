@@ -156,3 +156,4 @@ Verified facts given directly by Prisca (25 Nov 2026). These rank alongside the 
 - **Arinze Obidiegwu portfolio:** freelance, **Jul – Aug 2025** (supersedes "2025").
 
 - **Capabilities:** removed the "Practical · growing" tag from Backend & APIs (Prisca, Nov 2026).
+- **Home "In short":** now "Frontend, plus backend" / "React and Next.js at the core, with Node.js, Express and REST API integration alongside." **Field notes:** "Growing into" row dropped.

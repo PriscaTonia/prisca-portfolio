@@ -25,8 +25,8 @@ const inShort = [
     line: "The sole frontend developer when that's the job, part of a cross-functional team when it isn't.",
   },
   {
-    title: "Frontend, plus practical backend",
-    line: "React and Next.js at the core, with Node.js and Express experience that keeps growing.",
+    title: "Frontend, plus backend",
+    line: "React and Next.js at the core, with Node.js, Express and REST API integration alongside.",
   },
 ];
 

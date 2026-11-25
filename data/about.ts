@@ -21,7 +21,6 @@ export const fieldNotes = {
   draft: false,
   rows: [
     { label: "Home ground", value: "React · Next.js · TypeScript" },
-    { label: "Growing into", value: "Backend with Node.js and Express" },
     { label: "Off-screen", value: "Fashion and creative projects" },
   ],
 };
