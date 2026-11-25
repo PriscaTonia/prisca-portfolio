@@ -47,9 +47,15 @@ Order: featured by `order` 1–5 as listed; additional in reverse date order (Se
 
 | Org | Kind | Dates | Summary source |
 |---|---|---|---|
-| Fusion Intelligence | employment, current | Jun 2023 – Present | One sentence written from the brief + CV (no unverified metrics) |
-| The Pake Group | employment, part-time | Sep 2023 – Jul 2024 | **CV** (admin panel, e-commerce, dealership dashboard), condensed to one line |
-| Bellviv Professionals | employment, part-time | Jan 2022 – Dec 2023 | **Placeholder**: nothing in the repo or the CV |
+| Fusion Intelligence | employment, current | Jun 2023 – Present | One sentence from the brief + new CV. Chips: FoodEase, NMDB, CheckRef, **Surf n' Turf** |
+| The Pake Group | employment, part-time | Sep 2023 – Jul 2024 | **New CV**: Church of Jesus, Pake Purchase, Car Dealership, condensed to one line (no project pages) |
+| Bellviv Professionals | employment, part-time | Jan 2022 – Dec 2023 | **New CV**: six WordPress sites, research → build, SEO. Metrics pending a decision. |
+
+**Education & early experience** (About §08, not on the 2022+ timeline):
+- B.Eng. Computer Engineering (2016–2021) with its course chips
+- El Academy (02–06/2021)
+- Hotels.ng internship (10–12/2022), with its certificate
+- Genesys Tech Hub internship (06–09/2020), with its certificate
 | Sedic Group | contract | Jul – Aug 2026 | → `/work/sedic` |
 | ORIPA | contract | May – Jul 2026 | → `/work/oripa` |
 | Ednaimo | contract | Oct – Nov 2026 | → `/work/ednaimo` |
