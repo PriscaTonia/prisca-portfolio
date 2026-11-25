@@ -16,7 +16,7 @@ export function SiteFooter() {
             <Wordmark />
           </Link>
           <p className="serif mt-4 max-w-[22ch] text-[26px] leading-[1.15] text-ink">
-            Made with curiosity and a little bit of code.
+            Written in TypeScript, styled like an outfit.
           </p>
         </div>
 
